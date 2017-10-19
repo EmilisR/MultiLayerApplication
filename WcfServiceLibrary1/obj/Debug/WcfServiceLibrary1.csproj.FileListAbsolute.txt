@@ -10,3 +10,10 @@ C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\WcfServiceL
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.dll
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb

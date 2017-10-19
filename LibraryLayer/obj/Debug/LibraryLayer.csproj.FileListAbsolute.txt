@@ -2,3 +2,8 @@ C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLaye
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\bin\Debug\LibraryLayer.pdb
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\obj\Debug\LibraryLayer.dll
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\obj\Debug\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.pdb
