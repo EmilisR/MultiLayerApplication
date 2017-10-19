@@ -1,0 +1,9 @@
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csprojResolveAssemblyReference.cache
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\obj\Debug\DatabaseLayer.csprojResolveAssemblyReference.cache
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\bin\Debug\LibraryLayer.dll
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\bin\Debug\LibraryLayer.pdb
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
