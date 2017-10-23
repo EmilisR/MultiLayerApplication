@@ -10,8 +10,6 @@ namespace DatabaseLayer
 {
     public class BasketItem
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }

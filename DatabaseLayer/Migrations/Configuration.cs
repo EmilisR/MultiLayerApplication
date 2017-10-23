@@ -10,6 +10,7 @@ namespace DatabaseLayer.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "DatabaseLayer.ShopContext";
         }
 
         protected override void Seed(DatabaseLayer.ShopContext context)

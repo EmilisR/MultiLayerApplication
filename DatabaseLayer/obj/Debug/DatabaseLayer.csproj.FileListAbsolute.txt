@@ -18,5 +18,6 @@ C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseL
 C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.dll
 C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
-C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.init.resources
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.InitialCreate.resources
 C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.GenerateResource.Cache
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.init.resources

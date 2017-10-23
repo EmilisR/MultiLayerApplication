@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DatabaseLayer;
+using System;
 
 namespace TestLayer
 {
@@ -24,9 +25,9 @@ namespace TestLayer
                     db.SaveChanges();
                     Assert.IsTrue(db.Customers.Count() - 1 == oldCount);
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    throw ex;
                 }
                 finally
                 {
@@ -57,9 +58,9 @@ namespace TestLayer
                     db.SaveChanges();
                     Assert.IsTrue(db.Products.Count() - 1 == oldCount);
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    throw ex;
                 }
                 finally
                 {
@@ -86,6 +87,7 @@ namespace TestLayer
                         Price = 1799.99M,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
+                    db.SaveChanges();
                     Product product = db.Products.Where(x => x.Name == "Acer GL502VS").FirstOrDefault();
                     var oldCount = db.BasketItems.Count();
                     db.BasketItems.Add(new BasketItem()
@@ -97,9 +99,9 @@ namespace TestLayer
                     db.SaveChanges();
                     Assert.IsTrue(db.BasketItems.Count() - 1 == oldCount);
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    throw ex;
                 }
                 finally
                 {
