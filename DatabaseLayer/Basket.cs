@@ -11,8 +11,8 @@ namespace DatabaseLayer
     {
         public int Id { get; set; }
         public PaymentType PaymentType { get; set; }
-        public double TotalPrice { get; set; }
-        public BasketItem[] BasketItems { get; set; }
-
+        public decimal TotalPrice { get; set; }
+        public virtual BasketItem[] BasketItems { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

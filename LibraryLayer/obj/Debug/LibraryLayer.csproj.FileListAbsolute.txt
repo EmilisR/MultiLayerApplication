@@ -2,3 +2,8 @@ C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLaye
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\bin\Debug\LibraryLayer.pdb
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\obj\Debug\LibraryLayer.dll
 C:\Users\emilisr\Documents\Visual Studio 2017\Projects\MultiLayerApp\LibraryLayer\obj\Debug\LibraryLayer.pdb
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.dll
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.pdb
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.csprojResolveAssemblyReference.cache
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.dll
+C:\Users\emilisr\Documents\MultiLayerApplication\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.pdb
