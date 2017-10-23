@@ -75,9 +75,9 @@
       <Project>{0a32402d-e7be-45dd-9ae1-ac1c0541c5e0}</Project>
       <Name>LibraryLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WcfServiceLibrary1\WcfServiceLibrary1.csproj">
+    <ProjectReference Include="..\WcfServiceLibrary1\LoginService.csproj">
       <Project>{f3dab7a1-909b-4516-a344-b15bedd00ca7}</Project>
-      <Name>WcfServiceLibrary1</Name>
+      <Name>LoginService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
