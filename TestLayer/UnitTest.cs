@@ -114,5 +114,65 @@ namespace TestLayer
                 }
             }
         }
+
+        [TestMethod]
+        public void AddToBasketDBTest()
+        {
+            using (var db = new ShopContext())
+            {
+                try
+                {
+                    var oldCount = db.BasketItems.Count();
+
+                    Product product = new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    };
+                    BasketItem basketItem = new BasketItem()
+                    {
+                        Product = product,
+                        Quantity = 3
+                    };
+                    basketItem.TotalPrice = basketItem.Product.Price * basketItem.Quantity;
+                    Customer customer = new Customer()
+                    {
+                        Email = "emilis@ruzveltas.lt",
+                        MobileNumber = "+37064589699",
+                        Name = "Emilis",
+                        Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+                        Surname = "Ruzveltas"
+                    };
+                    Basket basket = new Basket()
+                    {
+                        BasketItems = new BasketItem[]
+                        {
+                            basketItem
+                        },
+                        Customer = customer,
+                        PaymentType = LibraryLayer.Enums.PaymentType.Cash
+                    };
+                    basket.TotalPrice = basket.BasketItems.Select(x => x.TotalPrice).Sum();
+                    db.Baskets.Add(basket);
+                    db.SaveChanges();
+                    var a = db.Baskets.ToList();
+                    Assert.IsTrue(db.Baskets.Count() - 1 == oldCount);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    if (db.Baskets.Any(x => x.Customer.Name == "Emilis"))
+                    {
+                        db.Baskets.RemoveRange(db.Baskets.Where(x => x.Customer.Name == "Emilis"));
+                        db.SaveChanges();
+                    }
+                }
+            }
+        }
     }
 }
