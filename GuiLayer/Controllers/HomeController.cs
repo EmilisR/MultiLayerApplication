@@ -15,16 +15,18 @@ namespace GuiLayer.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Visa informacija apie mus";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Mus rasite";
 
             return View();
         }
+
+        
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\DatabaseLayer.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\DatabaseLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\DatabaseLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\EntityFramework.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\EntityFramework.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.csprojResolveAssemblyReference.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.InitialCreate.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.init.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.csproj.GenerateResource.Cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.pdb

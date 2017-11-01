@@ -1,0 +1,10 @@
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\DatabaseLayer\bin\Debug\DatabaseLayer.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.csprojResolveAssemblyReference.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.Migrations.InitialCreate.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.Migrations.init.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.csproj.GenerateResource.Cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\DatabaseLayer\Debug\DatabaseLayer.pdb

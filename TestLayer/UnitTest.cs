@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DatabaseLayer;
 using System;
+using LoginService;
 
 namespace TestLayer
 {
@@ -69,6 +70,35 @@ namespace TestLayer
                         db.Products.RemoveRange(db.Products.Where(x => x.Name == "Acer GL502VS"));
                         db.SaveChanges();
                     }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void PasswordTest()
+        {
+            using (var db = new ShopContext())
+            {
+                try
+                {
+                    db.Customers.Add(new Customer()
+                    {
+                        Email = "emilis@ruzveltas.lt",
+                        Password = "872a863b80ed19d8df1a95e073f68535c6d0a6713d1d7f3ed80d17ced3482585"
+                    });
+                    db.SaveChanges();
+
+                    LoginServiceClient service = new LoginServiceClient();
+                    Assert.IsTrue(service.Login("emilis@ruzveltas.lt", "emilis"));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    db.Customers.RemoveRange(db.Customers.Where(x => x.Email == "emilis@ruzveltas.lt"));
+                    db.SaveChanges();
                 }
             }
         }
@@ -168,7 +198,8 @@ namespace TestLayer
                 {
                     if (db.Baskets.Any(x => x.Customer.Name == "Emilis"))
                     {
-                        db.Baskets.RemoveRange(db.Baskets.Where(x => x.Customer.Name == "Emilis"));
+                        db.Baskets.RemoveRange(db.Baskets.Where(x => x.Customer.Email == "emilis@ruzveltas.lt"));
+                        db.Customers.RemoveRange(db.Customers.Where(x => x.Email == "emilis@ruzveltas.lt"));
                         db.SaveChanges();
                     }
                 }

@@ -1,0 +1,6 @@
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\LibraryLayer\bin\Debug\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\LibraryLayer\bin\Debug\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LibraryLayer\Debug\LibraryLayer.csprojResolveAssemblyReference.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LibraryLayer\Debug\LibraryLayer.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LibraryLayer\Debug\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LibraryLayer\Debug\LibraryLayer.pdb

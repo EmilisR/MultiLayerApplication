@@ -1,0 +1,6 @@
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\LoginService\bin\Debug\LoginService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\LoginService\bin\Debug\LoginService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\b\LoginService\bin\Debug\LoginService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LoginService\Debug\LoginService.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LoginService\Debug\LoginService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\.vs\MultiLayerApp\lut\0\i\LoginService\Debug\LoginService.pdb

@@ -1,0 +1,16 @@
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\LoginService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\LoginService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\LoginService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\DatabaseLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\EntityFramework.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\LibraryLayer.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\DatabaseLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\DatabaseLayer.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\EntityFramework.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\bin\Release\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\obj\Release\LoginService.csprojResolveAssemblyReference.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\obj\Release\LoginService.csproj.CoreCompileInputs.cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\obj\Release\LoginService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LoginService\obj\Release\LoginService.pdb
