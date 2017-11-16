@@ -21,5 +21,12 @@ namespace LibraryLayer
             Media,
             Games
         }
+
+        public enum Currency
+        {
+            EUR,
+            USD,
+            GBP
+        }
     }
 }
