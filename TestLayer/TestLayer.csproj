@@ -75,9 +75,9 @@
       <Project>{0a32402d-e7be-45dd-9ae1-ac1c0541c5e0}</Project>
       <Name>LibraryLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LoginService\LoginService.csproj">
+    <ProjectReference Include="..\Login.Service\Login.Service.csproj">
       <Project>{f3dab7a1-909b-4516-a344-b15bedd00ca7}</Project>
-      <Name>LoginService</Name>
+      <Name>Login.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

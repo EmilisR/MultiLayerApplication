@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.basket {
+    width: 100%;
+}
+
+.totalPrice{
+    text-align:end;
+    font-weight:bold;
+}
+
+.item {
+    border-style: groove;
+    display:inline-block;
+}

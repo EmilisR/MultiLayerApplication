@@ -1,0 +1,44 @@
+﻿@model GuiLayer.Models.BasketViewModel
+
+@{
+    ViewBag.Title = "Pirkinių krepšelis";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    @if (Model != null && Model.BasketItems.Count() > 0)
+    {
+        <table class="basket">
+            <thead>
+                <tr>
+                    <th>Modelis</th>
+                    <th>Prekė</th>
+                    <th>Vnt. Kaina</th>
+                    <th>Kiekis</th>
+                    <th style="text-align:right">Iš viso</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.BasketItems)
+                {
+                    <tr>
+                        <td>@item.BasketId</td>
+                        <td>@item.Name</td>
+                        <td>@Math.Round(@item.Price, 2) @Model.PriceItem.Currency</td>
+                        <td>@item.Quantity</td>
+                        <td style="text-align:right">@Math.Round(@item.Quantity * @item.Price, 2) @Model.PriceItem.Currency</td>
+                    </tr>
+                }
+                <tr>
+                    <td class="totalPrice" colspan="5">Suma: @Model.PriceItem.Price @Model.PriceItem.Currency</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2>Pirkinių krepšelis tuščias</h2>
+    }
+</div>
+

@@ -83,6 +83,9 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\obj\Debug\TestLayer.
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\LoginService.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\LoginService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\LoginService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.exe
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.exe.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.rsp

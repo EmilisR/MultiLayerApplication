@@ -317,3 +317,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\EntityFramework.x
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\LibraryLayer.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\EntityFramework.SqlServer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\ProductItemService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\ProductItemService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\ProductItemService.dll.config

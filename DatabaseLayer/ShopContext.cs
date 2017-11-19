@@ -13,5 +13,13 @@ namespace DatabaseLayer
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
+        public ShopContext()
+        {
+
+        }
+        public ShopContext(string connectionString) : base(connectionString)
+        {
+            
+        }
     }
 }

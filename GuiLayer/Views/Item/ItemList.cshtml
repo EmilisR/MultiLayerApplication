@@ -1,0 +1,19 @@
+﻿@model GuiLayer.Models.ProductItemModel
+
+@{
+    ViewBag.Title = "Prekės";
+}
+
+<h2>Prekių sąrašas</h2>
+
+@foreach (var product in Model.Products)
+{
+    <table class="item">
+        <tr>
+            <td>@product.Name</td>
+        </tr>
+        <tr>
+            <td>@product.Price @LibraryLayer.Enums.Currency.EUR</td>
+        </tr>
+    </table>
+}

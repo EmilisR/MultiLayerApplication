@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DatabaseLayer;
 using System;
-using LoginService;
+using Login.Service;
 
 namespace TestLayer
 {
@@ -75,6 +75,59 @@ namespace TestLayer
         }
 
         [TestMethod]
+        public void AddToProductDB()
+        {
+            using (var db = new ShopContext())
+            {
+                try
+                {
+                    var oldCount = db.Products.Count();
+                    db.Products.Add(new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    });
+                    db.Products.Add(new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    });
+                    db.Products.Add(new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    });
+                    db.Products.Add(new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    });
+                    db.Products.Add(new Product()
+                    {
+                        Name = "Acer GL502VS",
+                        Description = "Gaming laptop",
+                        Price = 1799.99M,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                    });
+                    db.SaveChanges();
+                    Assert.IsTrue(db.Products.Count() - 5 == oldCount);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        [TestMethod]
         public void PasswordTest()
         {
             using (var db = new ShopContext())
@@ -88,7 +141,7 @@ namespace TestLayer
                     });
                     db.SaveChanges();
 
-                    LoginServiceClient service = new LoginServiceClient();
+                    var service = new LoginService();
                     Assert.IsTrue(service.Login("emilis@ruzveltas.lt", "emilis"));
                 }
                 catch (Exception ex)

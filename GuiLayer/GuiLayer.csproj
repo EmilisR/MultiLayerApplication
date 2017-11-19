@@ -320,6 +320,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -328,6 +329,8 @@
     <Compile Include="Models\BasketViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PriceItemModel.cs" />
+    <Compile Include="Models\ProductItem.cs" />
+    <Compile Include="Models\ProductItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -371,10 +374,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Basket\ViewBasket.cshtml" />
+    <Content Include="Views\Item\ItemList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -396,9 +400,17 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LoginService\LoginService.csproj">
+    <ProjectReference Include="..\LibraryLayer\LibraryLayer.csproj">
+      <Project>{0a32402d-e7be-45dd-9ae1-ac1c0541c5e0}</Project>
+      <Name>LibraryLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Login.Service\Login.Service.csproj">
       <Project>{F3DAB7A1-909B-4516-A344-B15BEDD00CA7}</Project>
-      <Name>LoginService</Name>
+      <Name>Login.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductItem.Service\ProductItem.Service.csproj">
+      <Project>{a5b34b2b-85c4-4f14-9216-7d0dcf357ec2}</Project>
+      <Name>ProductItem.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

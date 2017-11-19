@@ -1,6 +1,6 @@
 ﻿using GuiLayer.Helpers;
 using GuiLayer.Models;
-using LoginService;
+using Login.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +24,8 @@ namespace GuiLayer.Controllers
         {
             if (ModelState.IsValid)
             {
-                LoginServiceClient client = new LoginServiceClient();
-                if (!client.Login(model.Email, model.Password))
+                var service = new LoginService();
+                if (!service.Login(model.Email, model.Password))
                     model.Error = "Neteisingas el. paštas ir/ar slaptažodis!";
             }
 
