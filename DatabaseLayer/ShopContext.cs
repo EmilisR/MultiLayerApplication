@@ -15,11 +15,11 @@ namespace DatabaseLayer
         public DbSet<BasketItem> BasketItems { get; set; }
         public ShopContext()
         {
-
+            Database.CreateIfNotExists();
         }
         public ShopContext(string connectionString) : base(connectionString)
         {
-            
+            Database.CreateIfNotExists();
         }
     }
 }

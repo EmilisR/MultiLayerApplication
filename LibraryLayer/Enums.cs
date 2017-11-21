@@ -28,5 +28,11 @@ namespace LibraryLayer
             USD,
             GBP
         }
+
+        public enum QuantitySource
+        {
+            Sandelyje,
+            Atvykstantys
+        }
     }
 }

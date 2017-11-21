@@ -12,7 +12,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToCustomerDBTest()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {
@@ -44,7 +44,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToProductDBTest()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {
@@ -77,7 +77,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToProductDB()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {
@@ -87,6 +87,8 @@ namespace TestLayer
                         Name = "Acer GL502VS",
                         Description = "Gaming laptop",
                         Price = 1799.99M,
+                        QuantityInStock = 25,
+                        QuantityArriving = 35,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
                     db.Products.Add(new Product()
@@ -94,6 +96,8 @@ namespace TestLayer
                         Name = "Acer GL502VS",
                         Description = "Gaming laptop",
                         Price = 1799.99M,
+                        QuantityInStock = 25,
+                        QuantityArriving = 35,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
                     db.Products.Add(new Product()
@@ -101,6 +105,8 @@ namespace TestLayer
                         Name = "Acer GL502VS",
                         Description = "Gaming laptop",
                         Price = 1799.99M,
+                        QuantityInStock = 25,
+                        QuantityArriving = 35,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
                     db.Products.Add(new Product()
@@ -108,6 +114,8 @@ namespace TestLayer
                         Name = "Acer GL502VS",
                         Description = "Gaming laptop",
                         Price = 1799.99M,
+                        QuantityInStock = 25,
+                        QuantityArriving = 35,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
                     db.Products.Add(new Product()
@@ -115,6 +123,8 @@ namespace TestLayer
                         Name = "Acer GL502VS",
                         Description = "Gaming laptop",
                         Price = 1799.99M,
+                        QuantityInStock = 25,
+                        QuantityArriving = 35,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     });
                     db.SaveChanges();
@@ -130,7 +140,7 @@ namespace TestLayer
         [TestMethod]
         public void PasswordTest()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {
@@ -159,7 +169,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToBasketItemDBTest()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {
@@ -201,7 +211,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToBasketDBTest()
         {
-            using (var db = new ShopContext())
+            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
                 try
                 {

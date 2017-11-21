@@ -14,6 +14,9 @@ namespace ProductItem.Service
     {
         [OperationContract]
         ProductItem[] GetAllProducts();
+
+        [OperationContract]
+        ProductItem GetProduct(int id);
     }
 
     [DataContract]

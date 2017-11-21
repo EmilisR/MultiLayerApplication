@@ -31,9 +31,8 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\Librar
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\EntityFramework.xml
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csprojResolveAssemblyReference.cache
-C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.InitialCreate.resources
-C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.init.resources
-C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.GenerateResource.Cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.init.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.GenerateResource.Cache

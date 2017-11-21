@@ -86,6 +86,13 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\LoginServi
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\ProductItemService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\WebActivatorEx.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Abstractions.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Container.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Mvc.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Configuration.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Mvc.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Configuration.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.exe
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.exe.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\csc.rsp

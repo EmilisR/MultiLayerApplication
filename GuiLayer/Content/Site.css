@@ -32,7 +32,14 @@ textarea {
     font-weight:bold;
 }
 
+
+
+.toBasket, img, td{
+    margin:auto;
+    display:block;
+}
+
 .item {
     border-style: groove;
-    display:inline-block;
+    display: inline-block;
 }

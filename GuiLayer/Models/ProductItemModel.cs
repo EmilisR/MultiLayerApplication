@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Linq;
 using System.Web;
+using static LibraryLayer.Enums;
 
 namespace GuiLayer.Models
 {
@@ -11,5 +12,7 @@ namespace GuiLayer.Models
     {
         [Required]
         public ProductItem[] Products { get; set; }
+        [Required]
+        public QuantitySource QuantitySource { get; set; }
     }
 }

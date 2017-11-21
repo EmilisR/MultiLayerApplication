@@ -5,15 +5,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProductItem.Service;
+using Unity;
 
 namespace GuiLayer.Controllers
 {
     public class ItemController : Controller
     {
         // GET: Item
-        public ActionResult ItemList()
+        public ActionResult ItemList(ProductItemModel model)
         {
-            var service = new ProductItemService();
+            var service = UnityConfig.Container.Resolve<IProductItemService>();
 
             var products = service.GetAllProducts();
 

@@ -61,7 +61,7 @@ namespace Login.Service
             {
                 string password;
 
-                using (var context = new ShopContext())
+                using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
                 {
                     password = context.Customers.Where(x => x.Email == email).SingleOrDefault().Password;
                 }
