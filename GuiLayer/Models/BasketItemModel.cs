@@ -9,7 +9,7 @@ namespace GuiLayer.Models
     public class BasketItemModel
     {
         [Required]
-        public int BasketId { get; set; }
+        public int ProductId { get; set; }
         [Required]
         public int Quantity { get; set; }
         [Required]

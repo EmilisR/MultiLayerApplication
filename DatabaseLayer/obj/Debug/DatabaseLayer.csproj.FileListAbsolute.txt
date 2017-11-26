@@ -34,5 +34,8 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\Databa
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
-C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.init.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.uniqueEmail.resources
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.GenerateResource.Cache
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.addstate.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.basket.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.required.resources

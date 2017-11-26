@@ -14,6 +14,9 @@ namespace Login.Service
         [OperationContract]
         bool Login(string email, string password);
 
+        [OperationContract]
+        string GetUserFirstName(string email);
+
         // TODO: Add your service operations here
     }
 

@@ -31,7 +31,11 @@
         </tr>
         <tr>
             <td>
-                <button type="submit" class="toBasket btn btn-default">Į krepšelį</button>
+                @using (Html.BeginForm("AddToBasket", "Basket", new { itemId = product.Id}, FormMethod.Post, null))
+                {
+                    <button type="submit" value="@product.Id" class="toBasket btn btn-default">Į krepšelį</button>
+                }
+                    
             </td>
         </tr>
     </table>

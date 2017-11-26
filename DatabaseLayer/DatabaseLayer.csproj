@@ -49,9 +49,21 @@
   <ItemGroup>
     <Compile Include="Basket.cs" />
     <Compile Include="BasketItem.cs" />
-    <Compile Include="Migrations\201711212104463_init.cs" />
-    <Compile Include="Migrations\201711212104463_init.Designer.cs">
-      <DependentUpon>201711212104463_init.cs</DependentUpon>
+    <Compile Include="Migrations\201711261156063_uniqueEmail.cs" />
+    <Compile Include="Migrations\201711261156063_uniqueEmail.Designer.cs">
+      <DependentUpon>201711261156063_uniqueEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711261845142_add-state.cs" />
+    <Compile Include="Migrations\201711261845142_add-state.Designer.cs">
+      <DependentUpon>201711261845142_add-state.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711262015331_basket.cs" />
+    <Compile Include="Migrations\201711262015331_basket.Designer.cs">
+      <DependentUpon>201711262015331_basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711262020523_required.cs" />
+    <Compile Include="Migrations\201711262020523_required.Designer.cs">
+      <DependentUpon>201711262020523_required.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ShopContext.cs" />
@@ -70,8 +82,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711212104463_init.resx">
-      <DependentUpon>201711212104463_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711261156063_uniqueEmail.resx">
+      <DependentUpon>201711261156063_uniqueEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711261845142_add-state.resx">
+      <DependentUpon>201711261845142_add-state.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711262015331_basket.resx">
+      <DependentUpon>201711262015331_basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711262020523_required.resx">
+      <DependentUpon>201711262020523_required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -337,3 +337,12 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Interceptio
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Mvc.xml
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.RegistrationByConvention.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.ServiceLocation.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Basket.Service.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Basket.Service.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Basket.Service.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.dll.config

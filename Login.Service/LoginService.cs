@@ -17,6 +17,22 @@ namespace Login.Service
             return validatePassword(email, password);
         }
 
+        public string GetUserFirstName(string email)
+        {
+            var name = string.Empty;
+
+            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            {
+                var user = context.Customers.Where(x => x.Email == email);
+                if (user.Count() == 1)
+                {
+                    name = user.First().Name;
+                }
+            }
+
+            return name;
+        }
+
         private bool validatePassword(string email, string password)
         {
             var realPassword = "";

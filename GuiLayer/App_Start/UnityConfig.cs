@@ -1,3 +1,4 @@
+using ProductItem.Service;
 using System;
 
 using Unity;
@@ -47,6 +48,9 @@ namespace GuiLayer
             container.RegisterType<Login.Service.ILoginService, Login.Service.LoginService>();
             container.RegisterType<ProductItem.Service.IProductItemService, ProductItem.Service.ProductItemInStockService>();
             container.RegisterType<ProductItem.Service.IProductItemService, ProductItem.Service.ProductItemArrivingService>();
+            container.RegisterType<User.Service.IUserService, User.Service.UserService>();
+            container.RegisterType<Basket.Service.IBasketService, Basket.Service.BasketService>();
+            container.RegisterType<Product.Service.IProductService, Product.Service.ProductService>();
             container.RegisterType<ProductItem.Service.Helper>();
             //DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

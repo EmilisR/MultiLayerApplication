@@ -24,8 +24,8 @@
                     <li>@Html.ActionLink("Apie mus", "About", "Home")</li>
                     <li>@Html.ActionLink("Kontaktai", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Pirkinių krepšelis", "ViewBasket", "Basket")</li>
-                    <li>@Html.ActionLink("Prisijungimas", "Login", "Account")</li>
                 </ul>
+                @Html.Partial("LoginPartial");
             </div>
         </div>
     </div>

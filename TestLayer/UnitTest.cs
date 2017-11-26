@@ -93,42 +93,24 @@ namespace TestLayer
                     });
                     db.Products.Add(new Product()
                     {
-                        Name = "Acer GL502VS",
-                        Description = "Gaming laptop",
-                        Price = 1799.99M,
-                        QuantityInStock = 25,
-                        QuantityArriving = 35,
-                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                        Name = "XBOX One S",
+                        Description = "Gaming console",
+                        Price = 499.99M,
+                        QuantityInStock = 15,
+                        QuantityArriving = 2,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.Media
                     });
                     db.Products.Add(new Product()
                     {
-                        Name = "Acer GL502VS",
-                        Description = "Gaming laptop",
-                        Price = 1799.99M,
-                        QuantityInStock = 25,
-                        QuantityArriving = 35,
-                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
-                    });
-                    db.Products.Add(new Product()
-                    {
-                        Name = "Acer GL502VS",
-                        Description = "Gaming laptop",
-                        Price = 1799.99M,
-                        QuantityInStock = 25,
-                        QuantityArriving = 35,
-                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
-                    });
-                    db.Products.Add(new Product()
-                    {
-                        Name = "Acer GL502VS",
-                        Description = "Gaming laptop",
-                        Price = 1799.99M,
-                        QuantityInStock = 25,
-                        QuantityArriving = 35,
-                        ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
+                        Name = "Samsung UE65K4500",
+                        Description = "UHD TV",
+                        Price = 1299.99M,
+                        QuantityInStock = 12,
+                        QuantityArriving = 3,
+                        ProductCategory = LibraryLayer.Enums.ProductCategory.TV
                     });
                     db.SaveChanges();
-                    Assert.IsTrue(db.Products.Count() - 5 == oldCount);
+                    Assert.IsTrue(db.Products.Count() - 3 == oldCount);
                 }
                 catch (Exception ex)
                 {
@@ -224,12 +206,6 @@ namespace TestLayer
                         Price = 1799.99M,
                         ProductCategory = LibraryLayer.Enums.ProductCategory.Computers
                     };
-                    BasketItem basketItem = new BasketItem()
-                    {
-                        Product = product,
-                        Quantity = 3
-                    };
-                    basketItem.TotalPrice = basketItem.Product.Price * basketItem.Quantity;
                     Customer customer = new Customer()
                     {
                         Email = "emilis@ruzveltas.lt",
@@ -240,14 +216,19 @@ namespace TestLayer
                     };
                     Basket basket = new Basket()
                     {
-                        BasketItems = new BasketItem[]
-                        {
-                            basketItem
-                        },
                         Customer = customer,
                         PaymentType = LibraryLayer.Enums.PaymentType.Cash
                     };
-                    basket.TotalPrice = basket.BasketItems.Select(x => x.TotalPrice).Sum();
+                    BasketItem basketItem = new BasketItem()
+                    {
+                        Product = product,
+                        Quantity = 3,
+                        Basket = basket
+                    };
+                    basketItem.TotalPrice = basketItem.Product.Price * basketItem.Quantity;
+                    
+                    
+                    basket.TotalPrice = db.BasketItems.Where(x => x.Basket.Id == basket.Id).Select(x => x.TotalPrice).Sum();
                     db.Baskets.Add(basket);
                     db.SaveChanges();
                     var a = db.Baskets.ToList();

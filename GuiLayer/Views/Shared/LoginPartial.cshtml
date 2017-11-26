@@ -1,0 +1,23 @@
+﻿@using Unity;
+@using GuiLayer.Controllers;
+@{ 
+    var loginService = UnityConfig.Container.Resolve<Login.Service.LoginService>();
+    var name = @loginService.GetUserFirstName(AccountController.Email);
+}
+
+        @if (AccountController.LoggedIn && name != string.Empty)
+        {
+            <form asp-area="" asp-controller="Account" asp-action="Logoff" method="post" id="logoutForm" class="navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink($"Sveiki {@name}!", "ItemList", "Item")</li>
+                    <li>@Html.ActionLink("Atsijungti", "Logoff", "Account")</li>
+
+                </ul>
+            </form>
+        }
+        else
+        {
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Prisijungti", "Login", "Account")</li>
+            </ul>
+        }
