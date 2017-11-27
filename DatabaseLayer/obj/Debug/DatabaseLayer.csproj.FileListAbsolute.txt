@@ -39,3 +39,5 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\Databa
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.addstate.resources
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.basket.resources
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.required.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\DatabaseLayer.dll.CodeAnalysisLog.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\DatabaseLayer.dll.lastcodeanalysissucceeded

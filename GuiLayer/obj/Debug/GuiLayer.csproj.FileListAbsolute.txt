@@ -346,3 +346,5 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.p
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\GuiLayer.dll.CodeAnalysisLog.xml
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\GuiLayer.dll.lastcodeanalysissucceeded
