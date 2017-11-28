@@ -1,6 +1,8 @@
 ﻿using Microsoft.Practices.Unity.Configuration;
 using System.Configuration;
 using Unity;
+using UserService.Service;
+using Basket.Service;
 
 namespace BasketBLService
 {
@@ -42,7 +44,8 @@ namespace BasketBLService
                 section.Configure(container);
             }
 
-            container.RegisterType<Helper>();
+            container.RegisterType<UserService.Service.UserService>();
+            container.RegisterType<BasketService>();
 
             _container = container;
         }

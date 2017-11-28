@@ -1,6 +1,9 @@
-﻿using Microsoft.Practices.Unity.Configuration;
+﻿using Basket.Service;
+using Microsoft.Practices.Unity.Configuration;
+using Product.Service;
 using System.Configuration;
 using Unity;
+using UserService.Service;
 
 namespace ProductItem.Service
 {

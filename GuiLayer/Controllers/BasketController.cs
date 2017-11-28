@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GuiLayer.Controllers;
-using User.Service;
+using UserService.Service;
 using Unity;
 using Basket.Service;
 using Product.Service;
@@ -19,20 +19,9 @@ namespace GuiLayer.Controllers
         {
             if (AccountController.LoggedIn)
             {
-                var userService = UnityConfig.Container.Resolve<UserService>();
-                var basketService = UnityConfig.Container.Resolve<BasketService>();
-                var productService = UnityConfig.Container.Resolve<ProductService>();
+                var userService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
 
-                var user = userService.GetUser(AccountController.Email);
-                if (user != null)
-                {
-                    var basket = basketService.GetBasketForUser(user.Id);
-                    if (basket != null)
-                    {
-                        if (!basketService.AddItemToBasket(basket, itemId))
-                            return View();
-                    }
-                }
+                userService.AddToBasket(AccountController.Email, itemId);
             }
 
             return RedirectToAction(nameof(BasketController.ViewBasket), "Basket");
@@ -51,7 +40,7 @@ namespace GuiLayer.Controllers
 
             if (AccountController.LoggedIn)
             {
-                var userService = UnityConfig.Container.Resolve<UserService>();
+                var userService = UnityConfig.Container.Resolve<UserService.Service.UserService>();
                 var basketService = UnityConfig.Container.Resolve<BasketService>();
                 var productService = UnityConfig.Container.Resolve<ProductService>();
                 

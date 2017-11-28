@@ -438,6 +438,10 @@
       <Project>{85c7f247-9506-431c-953f-4747da093e96}</Project>
       <Name>Basket.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BasketBLService\BasketBLService.csproj">
+      <Project>{af989944-62f3-4362-9ef3-d19b989e8de1}</Project>
+      <Name>BasketBLService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryLayer\LibraryLayer.csproj">
       <Project>{0a32402d-e7be-45dd-9ae1-ac1c0541c5e0}</Project>
       <Name>LibraryLayer</Name>

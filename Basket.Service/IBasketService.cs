@@ -17,7 +17,9 @@ namespace Basket.Service
         [OperationContract]
         BasketItem[] GetBasketItems(int basketId);
         [OperationContract]
-        bool AddItemToBasket(Basket basket, int productId);
+        bool AddItemToBasket(int basketId, int productId);
+        [OperationContract]
+        void SetBasketPaid(int basketId);
     }
     [DataContract]
     public class Basket

@@ -11,7 +11,7 @@ namespace BasketBLService
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class GuestBasketService : IBasketBLService
     {
-        public bool AddToBasket(Basket.Service.Basket basket, BasketItem basketItem)
+        public bool AddToBasket(string userMail, int itemId)
         {
             throw new NotImplementedException();
         }
@@ -21,7 +21,7 @@ namespace BasketBLService
             throw new NotImplementedException();
         }
 
-        public decimal PayForBasket(Basket.Service.Basket basket, decimal moneyGiven)
+        public decimal PayForBasket(string userMail, decimal moneyGiven)
         {
             throw new NotImplementedException();
         }

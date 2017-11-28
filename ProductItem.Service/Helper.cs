@@ -9,7 +9,7 @@ namespace ProductItem.Service
 {
     public class Helper
     {
-        public ProductItem ToProductItem(Product product)
+        public ProductItem ToProductItem(DatabaseLayer.Product product)
         {
             if (product == null)
                 throw new Exception("product is null");

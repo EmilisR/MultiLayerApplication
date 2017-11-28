@@ -14,10 +14,10 @@ namespace BasketBLService
     public interface IBasketBLService
     {
         [OperationContract]
-        decimal PayForBasket(Basket.Service.Basket basket, decimal moneyGiven);
+        decimal PayForBasket(string userMail, decimal moneyGiven);
 
         [OperationContract]
-        bool AddToBasket(Basket.Service.Basket basket, BasketItem basketItem);
+        bool AddToBasket(string userMail, int itemId);
 
         [OperationContract]
         BLBasket GetBasketInfo(Basket.Service.Basket basket);

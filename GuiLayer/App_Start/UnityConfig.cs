@@ -1,5 +1,6 @@
 using ProductItem.Service;
 using System;
+using BasketBLService;
 
 using Unity;
 using Unity.AspNet.Mvc;
@@ -46,12 +47,14 @@ namespace GuiLayer
             // container.RegisterType<IProductRepository, ProductRepository>();
 
             container.RegisterType<Login.Service.ILoginService, Login.Service.LoginService>();
-            container.RegisterType<ProductItem.Service.IProductItemService, ProductItem.Service.ProductItemInStockService>();
-            container.RegisterType<ProductItem.Service.IProductItemService, ProductItem.Service.ProductItemArrivingService>();
-            container.RegisterType<User.Service.IUserService, User.Service.UserService>();
+            container.RegisterType<IProductItemService, ProductItemInStockService>();
+            container.RegisterType<IProductItemService, ProductItemArrivingService>();
+            container.RegisterType<UserService.Service.IUserService, UserService.Service.UserService>();
             container.RegisterType<Basket.Service.IBasketService, Basket.Service.BasketService>();
             container.RegisterType<Product.Service.IProductService, Product.Service.ProductService>();
-            container.RegisterType<ProductItem.Service.Helper>();
+            container.RegisterType<Helper>();
+            container.RegisterType<IBasketBLService, RegisteredUserBasketService>();
+            container.RegisterType<IBasketBLService, GuestBasketService>();
             //DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

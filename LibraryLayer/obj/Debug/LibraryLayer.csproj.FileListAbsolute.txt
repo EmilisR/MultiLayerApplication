@@ -13,5 +13,3 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\Library
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.csprojResolveAssemblyReference.cache
-C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.dll.CodeAnalysisLog.xml
-C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\LibraryLayer.dll.lastcodeanalysissucceeded

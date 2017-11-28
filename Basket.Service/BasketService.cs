@@ -11,11 +11,11 @@ namespace Basket.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class BasketService : IBasketService
     {
-        public bool AddItemToBasket(Basket basket, int productId)
+        public bool AddItemToBasket(int basketId, int productId)
         {
             using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
             {
-                var dbBasket = context.Baskets.SingleOrDefault(x => x.Id == basket.Id);
+                var dbBasket = context.Baskets.SingleOrDefault(x => x.Id == basketId);
                 if (dbBasket != null)
                 {
                     var basketItem = context.BasketItems.Where(x => x.Product.Id == productId && x.Basket.Id == dbBasket.Id).SingleOrDefault();
@@ -125,6 +125,20 @@ namespace Basket.Service
             }
 
             return basketItems;
+        }
+
+        public void SetBasketPaid(int basketId)
+        {
+            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            {
+                var basket = context.Baskets.SingleOrDefault(x => x.Id == basketId && !x.Paid);
+
+                if (basket != null)
+                {
+                    basket.Paid = true;
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }
