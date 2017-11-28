@@ -19,9 +19,9 @@ namespace GuiLayer.Controllers
         {
             if (AccountController.LoggedIn)
             {
-                var userService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
+                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
 
-                userService.AddToBasket(AccountController.Email, itemId);
+                basketService.AddToBasket(AccountController.Email, itemId);
             }
 
             return RedirectToAction(nameof(BasketController.ViewBasket), "Basket");
@@ -30,8 +30,17 @@ namespace GuiLayer.Controllers
         [HttpPost]
         public ActionResult PayForBasket(BasketViewModel model)
         {
-            ViewBag.Message = "Apmokėjimas";
-            return View(model);
+            if (AccountController.LoggedIn)
+            {
+                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
+
+                if (model.PaymentType == LibraryLayer.Enums.PaymentType.Cash)
+                    basketService.PayForBasket(AccountController.Email, LibraryLayer.Enums.PaymentType.Cash, model.MoneyGiven);
+                else
+                    basketService.PayForBasket(AccountController.Email, LibraryLayer.Enums.PaymentType.CreditCard);
+            }
+
+            return RedirectToAction(nameof(BasketController.ViewBasket), "Basket");
         }
 
         public ActionResult ViewBasket()

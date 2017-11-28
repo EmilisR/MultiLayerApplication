@@ -20,6 +20,8 @@ namespace Basket.Service
         bool AddItemToBasket(int basketId, int productId);
         [OperationContract]
         void SetBasketPaid(int basketId);
+        [OperationContract]
+        void SetBasketPaymentType(int basketId, PaymentType paymentType);
     }
     [DataContract]
     public class Basket

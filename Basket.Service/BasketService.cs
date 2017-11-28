@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using LibraryLayer;
 
 namespace Basket.Service
 {
@@ -136,6 +137,20 @@ namespace Basket.Service
                 if (basket != null)
                 {
                     basket.Paid = true;
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public void SetBasketPaymentType(int basketId, Enums.PaymentType paymentType)
+        {
+            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            {
+                var basket = context.Baskets.SingleOrDefault(x => x.Id == basketId);
+
+                if (basket != null)
+                {
+                    basket.PaymentType = paymentType;
                     context.SaveChanges();
                 }
             }

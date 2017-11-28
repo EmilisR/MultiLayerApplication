@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using Basket.Service;
+using LibraryLayer;
 
 namespace BasketBLService
 {
@@ -22,6 +23,11 @@ namespace BasketBLService
         }
 
         public decimal PayForBasket(string userMail, decimal moneyGiven)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven)
         {
             throw new NotImplementedException();
         }

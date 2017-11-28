@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryLayer", "LibraryLaye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLayer", "DatabaseLayer\DatabaseLayer.csproj", "{EA39DABF-E7FB-41ED-9F99-8094B1AFAC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login.Service", "Login.Service\Login.Service.csproj", "{F3DAB7A1-909B-4516-A344-B15BEDD00CA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginBLService", "Login.Service\LoginBLService.csproj", "{F3DAB7A1-909B-4516-A344-B15BEDD00CA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLayer", "TestLayer\TestLayer.csproj", "{0EAE867B-A97C-48F3-BD4C-F014A2BE5B5E}"
 EndProject

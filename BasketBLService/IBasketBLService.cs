@@ -14,7 +14,7 @@ namespace BasketBLService
     public interface IBasketBLService
     {
         [OperationContract]
-        decimal PayForBasket(string userMail, decimal moneyGiven);
+        decimal PayForBasket(string userMail, PaymentType paymentType, decimal moneyGiven);
 
         [OperationContract]
         bool AddToBasket(string userMail, int itemId);

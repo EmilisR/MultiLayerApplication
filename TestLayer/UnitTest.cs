@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DatabaseLayer;
 using System;
-using Login.Service;
+using LoginBLService;
 
 namespace TestLayer
 {

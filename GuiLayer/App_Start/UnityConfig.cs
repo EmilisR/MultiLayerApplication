@@ -46,7 +46,7 @@ namespace GuiLayer
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
-            container.RegisterType<Login.Service.ILoginService, Login.Service.LoginService>();
+            container.RegisterType<LoginBLService.ILoginService, LoginBLService.LoginService>();
             container.RegisterType<IProductItemService, ProductItemInStockService>();
             container.RegisterType<IProductItemService, ProductItemArrivingService>();
             container.RegisterType<UserService.Service.IUserService, UserService.Service.UserService>();

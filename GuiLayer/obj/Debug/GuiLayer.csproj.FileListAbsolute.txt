@@ -346,5 +346,8 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.p
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Product.Service.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\User.Service.dll.config
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\GuiLayer.dll.CodeAnalysisLog.xml
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\GuiLayer.dll.lastcodeanalysissucceeded
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Abstractions.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Container.pdb

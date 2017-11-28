@@ -1,6 +1,6 @@
 ﻿using GuiLayer.Helpers;
 using GuiLayer.Models;
-using Login.Service;
+using LoginBLService;
 using System;
 using System.Collections.Generic;
 using System.Linq;

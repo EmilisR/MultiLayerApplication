@@ -36,7 +36,7 @@ namespace BasketBLService
             throw new NotImplementedException();
         }
 
-        public decimal PayForBasket(string userMail, decimal moneyGiven = 0)
+        public decimal PayForBasket(string userMail, LibraryLayer.Enums.PaymentType paymentType, decimal moneyGiven = 0)
         {
             var userService = DependencyFactory.Container.Resolve<UserService.Service.UserService>();
             var basketService = DependencyFactory.Container.Resolve<BasketService>();
@@ -47,14 +47,16 @@ namespace BasketBLService
                 var basket = basketService.GetBasketForUser(user.Id);
                 if (basket != null && !basket.Paid)
                 {
-                    if (basket.PaymentType == LibraryLayer.Enums.PaymentType.Cash && basket.TotalPrice <= moneyGiven)
+                    if (paymentType == LibraryLayer.Enums.PaymentType.Cash && basket.TotalPrice <= moneyGiven)
                     {
                         basketService.SetBasketPaid(basket.Id);
+                        basketService.SetBasketPaymentType(basket.Id, paymentType);
                         return moneyGiven - basket.TotalPrice;
                     }
-                    if (basket.PaymentType == LibraryLayer.Enums.PaymentType.CreditCard)
+                    if (paymentType == LibraryLayer.Enums.PaymentType.CreditCard)
                     {
                         basketService.SetBasketPaid(basket.Id);
+                        basketService.SetBasketPaymentType(basket.Id, paymentType);
                         return 0;
                     }
                 }

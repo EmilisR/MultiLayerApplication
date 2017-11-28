@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using static LibraryLayer.Enums;
 
 namespace GuiLayer.Models
 {
@@ -14,5 +15,9 @@ namespace GuiLayer.Models
         [Required]
         [DataType(DataType.Currency)]
         public PriceItemModel PriceItem { get; set; }
+
+        [Required]
+        public PaymentType PaymentType { get; set; }
+        public decimal MoneyGiven { get; set; }
     }
 }
