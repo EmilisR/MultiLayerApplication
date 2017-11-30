@@ -39,11 +39,11 @@ namespace ProductItem.Service
         {
             var container = new UnityContainer();
 
-            var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            /*var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
             if (section != null)
             {
                 section.Configure(container);
-            }
+            }*/
 
             container.RegisterType<Helper>();
 

@@ -17,7 +17,7 @@ namespace BasketBLService
             throw new NotImplementedException();
         }
 
-        public BLBasket GetBasketInfo(Basket.Service.Basket basket)
+        public BLBasket GetBasketInfo(string userMail)
         {
             throw new NotImplementedException();
         }

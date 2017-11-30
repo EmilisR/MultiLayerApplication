@@ -12,3 +12,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\Library
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.csproj.CoreCompileInputs.cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\Unity.Abstractions.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Debug\Unity.Configuration.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Debug\LibraryLayer.csprojResolveAssemblyReference.cache

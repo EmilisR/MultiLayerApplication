@@ -3,6 +3,7 @@ using System.Configuration;
 using Unity;
 using UserService.Service;
 using Basket.Service;
+using NotificationService;
 
 namespace BasketBLService
 {
@@ -38,14 +39,15 @@ namespace BasketBLService
         {
             var container = new UnityContainer();
 
-            var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            /*var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
             if (section != null)
             {
                 section.Configure(container);
-            }
+            }*/
 
             container.RegisterType<UserService.Service.UserService>();
             container.RegisterType<BasketService>();
+            container.RegisterType<INotificationService, EmailNotificationService>();
 
             _container = container;
         }

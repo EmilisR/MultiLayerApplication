@@ -4,6 +4,8 @@ using BasketBLService;
 
 using Unity;
 using Unity.AspNet.Mvc;
+using Microsoft.Practices.Unity.Configuration;
+using System.Configuration;
 
 namespace GuiLayer
 {
@@ -16,6 +18,8 @@ namespace GuiLayer
         private static Lazy<IUnityContainer> container =
           new Lazy<IUnityContainer>(() =>
           {
+              //var a = ConfigurationManager.GetSection("unity");
+              //var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
               var container = new UnityContainer();
               RegisterTypes(container);
               return container;
@@ -48,7 +52,7 @@ namespace GuiLayer
 
             container.RegisterType<LoginBLService.ILoginService, LoginBLService.LoginService>();
             container.RegisterType<IProductItemService, ProductItemInStockService>();
-            container.RegisterType<IProductItemService, ProductItemArrivingService>();
+            //container.RegisterType<IProductItemService, ProductItemArrivingService>();
             container.RegisterType<UserService.Service.IUserService, UserService.Service.UserService>();
             container.RegisterType<Basket.Service.IBasketService, Basket.Service.BasketService>();
             container.RegisterType<Product.Service.IProductService, Product.Service.ProductService>();

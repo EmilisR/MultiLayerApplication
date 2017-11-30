@@ -49,48 +49,33 @@ namespace GuiLayer.Controllers
 
             if (AccountController.LoggedIn)
             {
-                var userService = UnityConfig.Container.Resolve<UserService.Service.UserService>();
-                var basketService = UnityConfig.Container.Resolve<BasketService>();
+                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
                 var productService = UnityConfig.Container.Resolve<ProductService>();
-                
-                var user = userService.GetUser(AccountController.Email);
-                if (user != null)
+                try
                 {
-                    var basket = basketService.GetBasketForUser(user.Id);
-                    if (basket != null)
+                    var basket = basketService.GetBasketInfo(AccountController.Email);
+                    return View(new BasketViewModel()
                     {
-                        var basketItems = basketService.GetBasketItems(basket.Id);
-                        if (basketItems != null)
+                        BasketItems = basket.BasketItems.Select(x => new BasketItemModel()
                         {
-                            var basketModel = new BasketViewModel()
-                            {
-                                BasketItems = basketItems.Select(x => {
-                                    var product = productService.GetProduct(x.ProductId);
-                                    return new BasketItemModel()
-                                    {
-                                        ProductId = product.Id,
-                                        Name = product.Name,
-                                        Price = product.Price,
-                                        Quantity = x.Quantity
-                                    };
-                                }).ToArray(),
-                                PriceItem = new PriceItemModel()
-                                {
-                                    Currency = LibraryLayer.Enums.Currency.EUR,
-                                    Price = Math.Round(basket.TotalPrice, 2)
-                                }
-                            };
-
-                            return View(basketModel);
+                            Quantity = x.Quantity,
+                            Name = productService.GetProduct(x.ProductId).Name,
+                            Price = productService.GetProduct(x.ProductId).Price,
+                            ProductId = productService.GetProduct(x.ProductId).Id
+                        }).ToArray(),
+                        PaymentType = basket.PaymentType,
+                        PriceItem = new PriceItemModel()
+                        {
+                            Currency = basket.Currency,
+                            Price = basket.TotalPrice
                         }
-                        else
-                            return View();
-                    }
-                    else
-                        return View();
+                    });
                 }
-                else
-                    return View();
+                catch
+                {
+                    return RedirectToAction(nameof(ItemController.ItemList), "Item");
+                }
+                
             }
             else
                 return View();

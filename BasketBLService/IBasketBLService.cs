@@ -20,7 +20,7 @@ namespace BasketBLService
         bool AddToBasket(string userMail, int itemId);
 
         [OperationContract]
-        BLBasket GetBasketInfo(Basket.Service.Basket basket);
+        BLBasket GetBasketInfo(string userMail);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
@@ -40,5 +40,9 @@ namespace BasketBLService
         public DateTime RegisterDate { get; set; }
         [DataMember]
         public bool Paid { get; set; }
+        [DataMember]
+        public BasketItem[] BasketItems { get; set; }
+        [DataMember]
+        public Currency Currency { get; set; }
     }
 }

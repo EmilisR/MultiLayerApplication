@@ -331,9 +331,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Registratio
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.ServiceLocation.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\WebActivatorEx.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\CommonServiceLocator.pdb
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Configuration.pdb
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Interception.pdb
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Interception.Configuration.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Mvc.xml
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.RegistrationByConvention.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.ServiceLocation.pdb
@@ -351,3 +348,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.p
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Abstractions.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Container.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.dll.config
