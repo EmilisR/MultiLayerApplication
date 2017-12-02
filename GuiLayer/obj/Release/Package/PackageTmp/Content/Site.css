@@ -22,3 +22,39 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.basket {
+    width: 100%;
+}
+
+.totalPrice{
+    text-align:end;
+    font-weight:bold;
+}
+
+
+
+.toBasket, img{
+    margin:auto;
+    display:block;
+}
+
+.item {
+    border-style: groove;
+    display: inline-grid;
+    width: 20%
+}
+
+.item > tbody{
+    display:table;
+}
+
+.item > tbody > tr > td{
+    text-align: center;
+    height:50px;
+}
+
+.payButton {
+    margin-left: 50%;
+    margin-top: 10%;
+}

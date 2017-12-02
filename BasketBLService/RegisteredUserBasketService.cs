@@ -5,6 +5,7 @@ using Unity;
 using Product.Service;
 using NotificationService;
 using LibraryLayer;
+using System.Linq;
 
 namespace BasketBLService
 {
@@ -59,6 +60,25 @@ namespace BasketBLService
                 }
             }
             return result;
+        }
+
+        public BasketItemInfo[] GetBasketItemsInfo(int basketId)
+        {
+            var productService = DependencyFactory.Container.Resolve<IProductService>();
+            var basketService = DependencyFactory.Container.Resolve<BasketService>();
+
+            var basketItems = basketService.GetBasketItems(basketId);
+            return basketItems.Select(x => 
+            {
+                var product = productService.GetProduct(x.ProductId);
+                return new BasketItemInfo()
+                {
+                    Name = product.Name,
+                    Price = product.Price,
+                    ProductId = product.Id,
+                    Quantity = x.Quantity
+                };
+            }).ToArray();
         }
 
         public decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven = 0)

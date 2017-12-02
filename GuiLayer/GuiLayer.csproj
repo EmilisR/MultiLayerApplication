@@ -440,10 +440,6 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Basket.Service\Basket.Service.csproj">
-      <Project>{85c7f247-9506-431c-953f-4747da093e96}</Project>
-      <Name>Basket.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BasketBLService\BasketBLService.csproj">
       <Project>{af989944-62f3-4362-9ef3-d19b989e8de1}</Project>
       <Name>BasketBLService</Name>
@@ -456,17 +452,9 @@
       <Project>{f3dab7a1-909b-4516-a344-b15bedd00ca7}</Project>
       <Name>LoginBLService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Product.Service\Product.Service.csproj">
-      <Project>{8b7747be-0797-400b-b81e-66a460696316}</Project>
-      <Name>Product.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ProductItem.Service\ProductItemBLService.csproj">
       <Project>{a5b34b2b-85c4-4f14-9216-7d0dcf357ec2}</Project>
       <Name>ProductItemBLService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\User.Service\User.Service.csproj">
-      <Project>{001c02a8-09bb-44e1-8cf1-c6bc9f1f8f25}</Project>
-      <Name>User.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -17,6 +17,22 @@ namespace BasketBLService
 
         [OperationContract]
         BLBasket GetBasketInfo(string userMail);
+
+        [OperationContract]
+        BasketItemInfo[] GetBasketItemsInfo(int basketId);
+    }
+
+    [DataContract]
+    public class BasketItemInfo
+    {
+        [DataMember]
+        public int ProductId { get; set; }
+        [DataMember]
+        public int Quantity { get; set; }
+        [DataMember]
+        public decimal Price { get; set; }
+        [DataMember]
+        public string Name { get; set; }
     }
 
     [DataContract]

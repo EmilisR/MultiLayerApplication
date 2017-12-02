@@ -1,15 +1,11 @@
-using ProductItemBLService;
 using System;
 using BasketBLService;
-
 using Unity;
 using Unity.AspNet.Mvc;
 using Microsoft.Practices.Unity.Configuration;
 using System.Configuration;
-using User.Service;
-using Basket.Service;
-using Product.Service;
 using LoginBLService;
+using ProductItemBLService;
 
 namespace GuiLayer
 {
@@ -57,9 +53,6 @@ namespace GuiLayer
             container.RegisterType<ILoginService, LoginService>();
             container.RegisterType<IProductItemService, ProductItemInStockService>();
             //container.RegisterType<IProductItemService, ProductItemArrivingService>();
-            container.RegisterType<IUserService, UserService>();
-            container.RegisterType<IBasketService, BasketService>();
-            container.RegisterType<IProductService, ProductService>();
             container.RegisterType<Helper>();
             container.RegisterType<IBasketBLService, RegisteredUserBasketService>();
             //container.RegisterType<IBasketBLService, GuestBasketService>();

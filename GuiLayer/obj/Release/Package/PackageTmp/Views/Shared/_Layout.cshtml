@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - TechShop - išmanios technikos parduotuvė</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -16,14 +17,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("TechShop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("TechShop", "ItemList", "Item", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Apie mus", "About", "Home")</li>
                     <li>@Html.ActionLink("Kontaktai", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Prisijungimas", "Login", "Account")</li>
+                    <li>@Html.ActionLink("Pirkinių krepšelis", "ViewBasket", "Basket")</li>
                 </ul>
+                @Html.Partial("LoginPartial");
             </div>
         </div>
     </div>

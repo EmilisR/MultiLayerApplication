@@ -1,16 +1,7 @@
 ﻿using GuiLayer.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using GuiLayer.Controllers;
-using User.Service;
 using Unity;
-using Basket.Service;
-using Product.Service;
-using System.Web.UI.WebControls;
-using System.Web.UI;
 using LibraryLayer;
 using BasketBLService;
 
@@ -54,18 +45,18 @@ namespace GuiLayer.Controllers
             if (AccountController.LoggedIn)
             {
                 var basketService = UnityConfig.Container.Resolve<RegisteredUserBasketService>();
-                var productService = UnityConfig.Container.Resolve<ProductService>();
                 try
                 {
                     var basket = basketService.GetBasketInfo(AccountController.Email);
+                    var basketItems = basketService.GetBasketItemsInfo(basket.Id);
                     return View(new BasketViewModel()
                     {
-                        BasketItems = basket.BasketItems.Select(x => new BasketItemModel()
+                        BasketItems = basketItems.Select(x => new BasketItemModel()
                         {
-                            Quantity = x.Quantity,
-                            Name = productService.GetProduct(x.ProductId).Name,
-                            Price = productService.GetProduct(x.ProductId).Price,
-                            ProductId = productService.GetProduct(x.ProductId).Id
+                            Name = x.Name,
+                            Price = x.Price,
+                            ProductId = x.ProductId,
+                            Quantity = x.Quantity
                         }).ToArray(),
                         PaymentType = basket.PaymentType,
                         PriceItem = new PriceItemModel()

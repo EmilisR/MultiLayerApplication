@@ -1,4 +1,5 @@
 ﻿using System;
+using Basket.Service;
 using LibraryLayer;
 
 namespace BasketBLService
@@ -11,6 +12,11 @@ namespace BasketBLService
         }
 
         public BLBasket GetBasketInfo(string userMail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public BasketItemInfo[] GetBasketItemsInfo(int basketId)
         {
             throw new NotImplementedException();
         }

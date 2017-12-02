@@ -3,3 +3,5 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Release\Libra
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Release\LibraryLayer.csproj.CoreCompileInputs.cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Release\LibraryLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\obj\Release\LibraryLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Release\Unity.Abstractions.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\LibraryLayer\bin\Release\Unity.Configuration.dll

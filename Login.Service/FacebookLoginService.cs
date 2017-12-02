@@ -10,10 +10,10 @@ namespace LoginBLService
     {
         public bool Login(string email, string password)
         {
-            return validatePassword(email, password);
+            return ValidatePassword(email, password);
         }
 
-        private bool validatePassword(string email, string password)
+        private bool ValidatePassword(string email, string password)
         {
             var service = DependencyFactory.Container.Resolve<IUserService>();
             var realPassword = "";
@@ -25,7 +25,7 @@ namespace LoginBLService
             catch { }
             if (realPassword != null)
             {
-                if (passwordToHash(password) == realPassword)
+                if (PasswordToHash(password) == realPassword)
                     return true;
                 else
                     return false;
@@ -36,7 +36,7 @@ namespace LoginBLService
             }
         }
 
-        private string passwordToHash(string password)
+        private string PasswordToHash(string password)
         {
             StringBuilder Sb = new StringBuilder();
 

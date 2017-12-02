@@ -3,7 +3,7 @@ namespace DatabaseLayer.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class uniqueEmail : DbMigration
+    public partial class UniqueEmail : DbMigration
     {
         public override void Up()
         {
