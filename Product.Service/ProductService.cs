@@ -1,11 +1,6 @@
 ﻿using DatabaseLayer;
-using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 
 namespace Product.Service
 {
@@ -41,7 +36,7 @@ namespace Product.Service
         {
             var products = new List<Product>();
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 products = context.Products.Where(x => x.QuantityArriving > 0).Select(x => new Product()
                 {
@@ -62,7 +57,7 @@ namespace Product.Service
         {
             var products = new List<Product>();
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 products = context.Products.Where(x => x.QuantityInStock > 0).Select(x => new Product()
                 {
@@ -83,7 +78,7 @@ namespace Product.Service
         {
             var product = new Product();
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var query = context.Products.Where(x => x.QuantityInStock > 0 && x.Id == itemId).SingleOrDefault();
 
@@ -109,7 +104,7 @@ namespace Product.Service
         {
             var product = new Product();
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var query = context.Products.Where(x => x.QuantityArriving > 0 && x.Id == itemId).SingleOrDefault();
 

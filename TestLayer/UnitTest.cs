@@ -12,7 +12,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToCustomerDBTest()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {
@@ -44,7 +44,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToProductDBTest()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {
@@ -77,7 +77,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToProductDB()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {
@@ -122,7 +122,7 @@ namespace TestLayer
         [TestMethod]
         public void PasswordTest()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {
@@ -151,7 +151,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToBasketItemDBTest()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {
@@ -193,7 +193,7 @@ namespace TestLayer
         [TestMethod]
         public void AddToBasketDBTest()
         {
-            using (var db = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var db = new ShopContext())
             {
                 try
                 {

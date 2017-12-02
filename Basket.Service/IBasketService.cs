@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
-using static LibraryLayer.Enums;
+using LibraryLayer;
 
 namespace Basket.Service
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IBasketService
     {
@@ -21,7 +17,7 @@ namespace Basket.Service
         [OperationContract]
         void SetBasketPaid(int basketId);
         [OperationContract]
-        void SetBasketPaymentType(int basketId, PaymentType paymentType);
+        void SetBasketPaymentType(int basketId, Enums.PaymentType paymentType);
     }
     [DataContract]
     public class Basket
@@ -29,7 +25,7 @@ namespace Basket.Service
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public PaymentType PaymentType { get; set; }
+        public Enums.PaymentType PaymentType { get; set; }
         [DataMember]
         public decimal TotalPrice { get; set; }
         [DataMember]

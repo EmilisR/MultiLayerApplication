@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using LibraryLayer;
 using System.ServiceModel;
-using System.Text;
-using static LibraryLayer.Enums;
 
 namespace Product.Service
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IProductService
     {
@@ -34,7 +29,7 @@ namespace Product.Service
         [DataMember]
         public int QuantityArriving { get; set; }
         [DataMember]
-        public ProductCategory ProductCategory { get; set; }
+        public Enums.ProductCategory ProductCategory { get; set; }
 
     }
 
