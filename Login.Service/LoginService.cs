@@ -20,7 +20,7 @@ namespace LoginBLService
 
             try
             {
-                realPassword = service.GetUserPasswordHash(email);
+                realPassword = service.GetUser(email).Password;
             }
             catch { }
             if (realPassword != null)
@@ -50,6 +50,18 @@ namespace LoginBLService
             }
 
             return Sb.ToString();
+        }
+
+        public string GetUserName(string email)
+        {
+            var service = DependencyFactory.Container.Resolve<IUserService>();
+            return service.GetUser(email).Name;
+        }
+
+        public bool IsAdmin(string email)
+        {
+            var service = DependencyFactory.Container.Resolve<IUserService>();
+            return service.GetUser(email).IsAdmin;
         }
     }
 }

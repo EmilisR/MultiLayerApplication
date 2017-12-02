@@ -1,11 +1,20 @@
 ﻿@using Unity;
 @using GuiLayer.Controllers;
-@using User.Service;
+@using LoginBLService;
 @{ 
-    var loginService = UnityConfig.Container.Resolve<UserService>();
-    var name = @loginService.GetUserFirstName(AccountController.Email);
+    var loginService = UnityConfig.Container.Resolve<ILoginService>();
+    var name = @loginService.GetUserName(AccountController.Email);
 }
 
+        @if (loginService.IsAdmin(AccountController.Email))
+        {
+            <form asp-area="" asp-controller="Item" asp-action="AddNewItem" method="post" id="itemAddForm" class="navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Pridėti naują prekę", "AddNewItem", "Item")</li>
+
+                </ul>
+            </form>
+        }
         @if (AccountController.LoggedIn && name != string.Empty)
         {
             <form asp-area="" asp-controller="Account" asp-action="Logoff" method="post" id="logoutForm" class="navbar-right">

@@ -8,10 +8,6 @@ namespace User.Service
     {
         [OperationContract]
         User GetUser(string email);
-        [OperationContract]
-        string GetUserFirstName(string email);
-        [OperationContract]
-        string GetUserPasswordHash(string email);
     }
 
     [DataContract]
@@ -29,5 +25,7 @@ namespace User.Service
         public string Name { get; set; }
         [DataMember]
         public string Surname { get; set; }
+        [DataMember]
+        public bool IsAdmin { get; set; }
     }
 }

@@ -23,5 +23,13 @@ namespace GuiLayer.Controllers
                 Products = products.Select(x => new Models.ProductItem() {Id = x.Id, Image = x.Image, Name = x.Name, Price = x.Price }).ToArray()
             });
         }
+
+        public ActionResult AddNewItem()
+        {
+            return View(new ProductItemModel()
+            {
+                
+            });
+        }
     }
 }

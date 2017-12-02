@@ -7,5 +7,9 @@ namespace LoginBLService
     {
         [OperationContract]
         bool Login(string email, string password);
+        [OperationContract]
+        string GetUserName(string email);
+        [OperationContract]
+        bool IsAdmin(string email);
     }
 }

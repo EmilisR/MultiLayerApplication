@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201711262020523_required.Designer.cs">
       <DependentUpon>201711262020523_required.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712022140286_isadmin.cs" />
+    <Compile Include="Migrations\201712022140286_isadmin.Designer.cs">
+      <DependentUpon>201712022140286_isadmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ShopContext.cs" />
     <Compile Include="Customer.cs" />
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711262020523_required.resx">
       <DependentUpon>201711262020523_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712022140286_isadmin.resx">
+      <DependentUpon>201712022140286_isadmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
