@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProductItem.Service
+namespace ProductItemBLService
 {
     public class Helper
     {

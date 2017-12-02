@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Unity;
 
-namespace ProductItem.Service
+namespace ProductItemBLService
 {
     public class ProductItemInStockService : IProductItemService
     {

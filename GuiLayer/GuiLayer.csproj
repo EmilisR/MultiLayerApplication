@@ -460,9 +460,9 @@
       <Project>{8b7747be-0797-400b-b81e-66a460696316}</Project>
       <Name>Product.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProductItem.Service\ProductItem.Service.csproj">
+    <ProjectReference Include="..\ProductItem.Service\ProductItemBLService.csproj">
       <Project>{a5b34b2b-85c4-4f14-9216-7d0dcf357ec2}</Project>
-      <Name>ProductItem.Service</Name>
+      <Name>ProductItemBLService</Name>
     </ProjectReference>
     <ProjectReference Include="..\User.Service\User.Service.csproj">
       <Project>{001c02a8-09bb-44e1-8cf1-c6bc9f1f8f25}</Project>

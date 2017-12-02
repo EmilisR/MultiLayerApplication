@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.ServiceModel;
 
-namespace ProductItem.Service
+namespace ProductItemBLService
 {
     [ServiceContract]
     public interface IProductItemService

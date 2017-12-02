@@ -2,7 +2,7 @@
 using Unity;
 using Product.Service;
 
-namespace ProductItem.Service
+namespace ProductItemBLService
 {
     public class ProductItemArrivingService : IProductItemService
     {

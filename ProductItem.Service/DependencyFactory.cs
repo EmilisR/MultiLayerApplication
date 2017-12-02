@@ -3,7 +3,7 @@ using Product.Service;
 using System.Configuration;
 using Unity;
 
-namespace ProductItem.Service
+namespace ProductItemBLService
 {
     /// <summary>
     /// Simple wrapper for unity resolution.
