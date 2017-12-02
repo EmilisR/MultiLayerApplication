@@ -1,7 +1,8 @@
 ﻿@using Unity;
 @using GuiLayer.Controllers;
+@using User.Service;
 @{ 
-    var loginService = UnityConfig.Container.Resolve<LoginBLService.LoginService>();
+    var loginService = UnityConfig.Container.Resolve<UserService>();
     var name = @loginService.GetUserFirstName(AccountController.Email);
 }
 

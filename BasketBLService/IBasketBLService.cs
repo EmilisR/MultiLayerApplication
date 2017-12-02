@@ -1,20 +1,16 @@
 ﻿using Basket.Service;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
-using static LibraryLayer.Enums;
+using LibraryLayer;
 
 namespace BasketBLService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface IBasketBLService
     {
         [OperationContract]
-        decimal PayForBasket(string userMail, PaymentType paymentType, decimal moneyGiven);
+        decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven);
 
         [OperationContract]
         bool AddToBasket(string userMail, int itemId);
@@ -23,15 +19,13 @@ namespace BasketBLService
         BLBasket GetBasketInfo(string userMail);
     }
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "BasketBLService.ContractType".
     [DataContract]
     public class BLBasket
     {
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public PaymentType PaymentType { get; set; }
+        public Enums.PaymentType PaymentType { get; set; }
         [DataMember]
         public decimal TotalPrice { get; set; }
         [DataMember]
@@ -43,6 +37,6 @@ namespace BasketBLService
         [DataMember]
         public BasketItem[] BasketItems { get; set; }
         [DataMember]
-        public Currency Currency { get; set; }
+        public Enums.Currency Currency { get; set; }
     }
 }

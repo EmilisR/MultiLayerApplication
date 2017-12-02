@@ -14,6 +14,9 @@ namespace Product.Service
     {
         [OperationContract]
         Product GetProduct(int itemId);
+
+        [OperationContract]
+        Product[] GetProductsArriving();
     }
     [DataContract]
     public class Product

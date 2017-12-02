@@ -6,6 +6,10 @@ using Unity;
 using Unity.AspNet.Mvc;
 using Microsoft.Practices.Unity.Configuration;
 using System.Configuration;
+using User.Service;
+using Basket.Service;
+using Product.Service;
+using LoginBLService;
 
 namespace GuiLayer
 {
@@ -50,15 +54,15 @@ namespace GuiLayer
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
-            container.RegisterType<LoginBLService.ILoginService, LoginBLService.LoginService>();
+            container.RegisterType<ILoginService, LoginService>();
             container.RegisterType<IProductItemService, ProductItemInStockService>();
             //container.RegisterType<IProductItemService, ProductItemArrivingService>();
-            container.RegisterType<UserService.Service.IUserService, UserService.Service.UserService>();
-            container.RegisterType<Basket.Service.IBasketService, Basket.Service.BasketService>();
-            container.RegisterType<Product.Service.IProductService, Product.Service.ProductService>();
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IBasketService, BasketService>();
+            container.RegisterType<IProductService, ProductService>();
             container.RegisterType<Helper>();
             container.RegisterType<IBasketBLService, RegisteredUserBasketService>();
-            container.RegisterType<IBasketBLService, GuestBasketService>();
+            //container.RegisterType<IBasketBLService, GuestBasketService>();
             //DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

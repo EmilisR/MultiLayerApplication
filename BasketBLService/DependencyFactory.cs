@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.Unity.Configuration;
 using System.Configuration;
 using Unity;
-using UserService.Service;
+using User.Service;
 using Basket.Service;
 using NotificationService;
 
@@ -45,8 +45,8 @@ namespace BasketBLService
                 section.Configure(container);
             }*/
 
-            container.RegisterType<UserService.Service.UserService>();
-            container.RegisterType<BasketService>();
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IBasketService, BasketService>();
             container.RegisterType<INotificationService, EmailNotificationService>();
 
             _container = container;

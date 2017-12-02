@@ -127,10 +127,6 @@
       <Project>{85C7F247-9506-431C-953F-4747DA093E96}</Project>
       <Name>Basket.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DatabaseLayer\DatabaseLayer.csproj">
-      <Project>{ea39dabf-e7fb-41ed-9f99-8094b1afac96}</Project>
-      <Name>DatabaseLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Product.Service\Product.Service.csproj">
       <Project>{8B7747BE-0797-400B-B81E-66A460696316}</Project>
       <Name>Product.Service</Name>

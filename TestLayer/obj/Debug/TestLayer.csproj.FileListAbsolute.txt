@@ -92,7 +92,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Cont
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Mvc.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Configuration.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Mvc.xml
-C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Configuration.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\User.Service.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Basket.Service.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Product.Service.dll
@@ -129,7 +128,9 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\vbc
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\VBCSCompiler.exe
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.dll
-C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Abstractions.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Container.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\NotificationService.dll
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\NotificationService.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\NotificationService.dll.config

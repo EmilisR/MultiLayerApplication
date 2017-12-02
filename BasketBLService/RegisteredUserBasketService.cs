@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 using Basket.Service;
-using UserService.Service;
+using User.Service;
 using Unity;
 using Product.Service;
 using NotificationService;
+using LibraryLayer;
 
 namespace BasketBLService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class RegisteredUserBasketService : IBasketBLService
     {
         public bool AddToBasket(string userMail, int itemId)
         {
-            var userService = DependencyFactory.Container.Resolve<UserService.Service.UserService>();
+            var userService = DependencyFactory.Container.Resolve<UserService>();
             var basketService = DependencyFactory.Container.Resolve<BasketService>();
 
             var user = userService.GetUser(userMail);
@@ -37,9 +32,8 @@ namespace BasketBLService
         {
             BLBasket result = null;
 
-            var userService = DependencyFactory.Container.Resolve<UserService.Service.UserService>();
+            var userService = DependencyFactory.Container.Resolve<UserService>();
             var basketService = DependencyFactory.Container.Resolve<BasketService>();
-            var productService = DependencyFactory.Container.Resolve<ProductService>();
 
             var user = userService.GetUser(userMail);
             if (user != null)
@@ -54,7 +48,7 @@ namespace BasketBLService
                         {
                             BasketItems = basketItems,
                             TotalPrice = Math.Round(basket.TotalPrice, 2),
-                            Currency = LibraryLayer.Enums.Currency.EUR,
+                            Currency = Enums.Currency.EUR,
                             Id = basket.Id,
                             RegisterDate = basket.RegisterDate,
                             CustomerId = basket.CustomerId,
@@ -65,12 +59,11 @@ namespace BasketBLService
                 }
             }
             return result;
-
         }
 
-        public decimal PayForBasket(string userMail, LibraryLayer.Enums.PaymentType paymentType, decimal moneyGiven = 0)
+        public decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven = 0)
         {
-            var userService = DependencyFactory.Container.Resolve<UserService.Service.UserService>();
+            var userService = DependencyFactory.Container.Resolve<UserService>();
             var basketService = DependencyFactory.Container.Resolve<BasketService>();
             var notificationService = DependencyFactory.Container.Resolve<INotificationService>();
 
@@ -80,13 +73,13 @@ namespace BasketBLService
                 var basket = basketService.GetBasketForUser(user.Id);
                 if (basket != null && !basket.Paid)
                 {
-                    if (paymentType == LibraryLayer.Enums.PaymentType.Cash && basket.TotalPrice <= moneyGiven)
+                    if (paymentType == Enums.PaymentType.Cash && basket.TotalPrice <= moneyGiven)
                     {
                         basketService.SetBasketPaid(basket.Id);
                         basketService.SetBasketPaymentType(basket.Id, paymentType);
                         return moneyGiven - basket.TotalPrice;
                     }
-                    if (paymentType == LibraryLayer.Enums.PaymentType.CreditCard)
+                    if (paymentType == Enums.PaymentType.CreditCard)
                     {
                         basketService.SetBasketPaid(basket.Id);
                         basketService.SetBasketPaymentType(basket.Id, paymentType);

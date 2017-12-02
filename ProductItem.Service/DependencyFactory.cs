@@ -1,9 +1,7 @@
-﻿using Basket.Service;
-using Microsoft.Practices.Unity.Configuration;
+﻿using Microsoft.Practices.Unity.Configuration;
 using Product.Service;
 using System.Configuration;
 using Unity;
-using UserService.Service;
 
 namespace ProductItem.Service
 {
@@ -46,6 +44,7 @@ namespace ProductItem.Service
             }*/
 
             container.RegisterType<Helper>();
+            container.RegisterType<IProductService, ProductService>();
 
             _container = container;
         }

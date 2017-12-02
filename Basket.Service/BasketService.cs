@@ -14,7 +14,7 @@ namespace Basket.Service
     {
         public bool AddItemToBasket(int basketId, int productId)
         {
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var dbBasket = context.Baskets.SingleOrDefault(x => x.Id == basketId);
                 if (dbBasket != null)
@@ -59,7 +59,7 @@ namespace Basket.Service
         {
             Basket basket = null;
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var dbBasket = context.Baskets.Where(x => x.Customer.Id == userId && !x.Paid).OrderByDescending(x => x.RegisterDate).FirstOrDefault();
 
@@ -108,7 +108,7 @@ namespace Basket.Service
         {
             BasketItem[] basketItems = null;
 
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var basket = context.Baskets.SingleOrDefault(x => x.Id == basketId && !x.Paid);
 
@@ -130,7 +130,7 @@ namespace Basket.Service
 
         public void SetBasketPaid(int basketId)
         {
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var basket = context.Baskets.SingleOrDefault(x => x.Id == basketId && !x.Paid);
 
@@ -144,7 +144,7 @@ namespace Basket.Service
 
         public void SetBasketPaymentType(int basketId, Enums.PaymentType paymentType)
         {
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
+            using (var context = new ShopContext())
             {
                 var basket = context.Baskets.SingleOrDefault(x => x.Id == basketId);
 

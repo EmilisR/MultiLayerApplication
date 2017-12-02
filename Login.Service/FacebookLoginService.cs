@@ -1,15 +1,11 @@
-﻿using DatabaseLayer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System;
 using System.Security.Cryptography;
-using System.ServiceModel;
 using System.Text;
+using Unity;
+using User.Service;
 
 namespace LoginBLService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class FacebookLoginService : ILoginService
     {
         public bool Login(string email, string password)
@@ -17,29 +13,14 @@ namespace LoginBLService
             return validatePassword(email, password);
         }
 
-        public string GetUserFirstName(string email)
-        {
-            var name = string.Empty;
-
-            using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
-            {
-                var user = context.Customers.Where(x => x.Email == email);
-                if (user.Count() == 1)
-                {
-                    name = user.First().Name;
-                }
-            }
-
-            return name;
-        }
-
         private bool validatePassword(string email, string password)
         {
+            var service = DependencyFactory.Container.Resolve<IUserService>();
             var realPassword = "";
 
             try
             {
-                realPassword = getPasswordHash(email);
+                realPassword = service.GetUserPasswordHash(email);
             }
             catch { }
             if (realPassword != null)
@@ -69,25 +50,6 @@ namespace LoginBLService
             }
 
             return Sb.ToString();
-        }
-
-        private string getPasswordHash(string email)
-        {
-            try
-            {
-                string password;
-
-                using (var context = new ShopContext(@"Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseLayer.ShopContext;Integrated Security=True;MultipleActiveResultSets=True"))
-                {
-                    password = context.Customers.Where(x => x.Email == email).SingleOrDefault().Password;
-                }
-
-                return password;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
         }
     }
 }

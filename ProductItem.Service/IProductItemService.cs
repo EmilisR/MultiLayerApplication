@@ -1,11 +1,6 @@
-﻿using DatabaseLayer;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace ProductItem.Service
 {

@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using DatabaseLayer;
 
-namespace UserService.Service
+namespace User.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
@@ -14,6 +14,10 @@ namespace UserService.Service
     {
         [OperationContract]
         User GetUser(string email);
+        [OperationContract]
+        string GetUserFirstName(string email);
+        [OperationContract]
+        string GetUserPasswordHash(string email);
     }
 
     [DataContract]

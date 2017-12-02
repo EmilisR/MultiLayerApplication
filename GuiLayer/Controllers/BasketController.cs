@@ -5,10 +5,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GuiLayer.Controllers;
-using UserService.Service;
+using User.Service;
 using Unity;
 using Basket.Service;
 using Product.Service;
+using System.Web.UI.WebControls;
+using System.Web.UI;
+using LibraryLayer;
+using BasketBLService;
 
 namespace GuiLayer.Controllers
 {
@@ -34,13 +38,13 @@ namespace GuiLayer.Controllers
             {
                 var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
 
-                if (model.PaymentType == LibraryLayer.Enums.PaymentType.Cash)
-                    basketService.PayForBasket(AccountController.Email, LibraryLayer.Enums.PaymentType.Cash, model.MoneyGiven);
+                if (model.PaymentType == Enums.PaymentType.Cash)
+                    basketService.PayForBasket(AccountController.Email, Enums.PaymentType.Cash, model.MoneyGiven);
                 else
-                    basketService.PayForBasket(AccountController.Email, LibraryLayer.Enums.PaymentType.CreditCard);
+                    basketService.PayForBasket(AccountController.Email, Enums.PaymentType.CreditCard);
             }
-
-            return RedirectToAction(nameof(BasketController.ViewBasket), "Basket");
+            var text = "Apmokėta sėkmingai";
+            return RedirectToAction(nameof(BasketController.ViewBasket), "Basket", new { message = text});
         }
 
         public ActionResult ViewBasket()
@@ -49,7 +53,7 @@ namespace GuiLayer.Controllers
 
             if (AccountController.LoggedIn)
             {
-                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
+                var basketService = UnityConfig.Container.Resolve<RegisteredUserBasketService>();
                 var productService = UnityConfig.Container.Resolve<ProductService>();
                 try
                 {
