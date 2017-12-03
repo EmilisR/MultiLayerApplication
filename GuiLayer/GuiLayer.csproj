@@ -363,6 +363,7 @@
     <Compile Include="Models\PriceItemModel.cs" />
     <Compile Include="Models\ProductItem.cs" />
     <Compile Include="Models\ProductItemModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -416,6 +417,8 @@
     <Content Include="Web - Copy.Release.config">
       <DependentUpon>Web - Copy.config</DependentUpon>
     </Content>
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Item\AddNewItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

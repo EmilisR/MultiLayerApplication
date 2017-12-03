@@ -8,8 +8,8 @@
 
         @if (loginService.IsAdmin(AccountController.Email))
         {
-            <form asp-area="" asp-controller="Item" asp-action="AddNewItem" method="post" id="itemAddForm" class="navbar-right">
-                <ul class="nav navbar-nav navbar-right">
+            <form asp-area="" asp-controller="Item" asp-action="AddNewItem" method="post" id="itemAddForm" class="navbar-left">
+                <ul class="nav navbar-nav navbar-left">
                     <li>@Html.ActionLink("Pridėti naują prekę", "AddNewItem", "Item")</li>
 
                 </ul>
@@ -29,5 +29,8 @@
         {
             <ul class="nav navbar-nav navbar-right">
                 <li>@Html.ActionLink("Prisijungti", "Login", "Account")</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Registruotis", "Register", "Account")</li>
             </ul>
         }

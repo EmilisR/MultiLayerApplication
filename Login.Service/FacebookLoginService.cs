@@ -63,5 +63,24 @@ namespace LoginBLService
             var service = DependencyFactory.Container.Resolve<IUserService>();
             return service.GetUser(email).IsAdmin;
         }
+
+        public bool Register(RegisterInfo info)
+        {
+            var service = DependencyFactory.Container.Resolve<IUserService>();
+
+            if (service.GetUser(info.Email) == null)
+            {
+                var user = StandardUserFactory.CreateUser();
+                user.Email = info.Email;
+                user.IsAdmin = false;
+                user.MobileNumber = info.Phone;
+                user.Name = info.Name;
+                user.Surname = info.Surname;
+                user.Password = info.Password;
+                return service.AddUser(user);
+            }
+
+            return false;
+        }
     }
 }

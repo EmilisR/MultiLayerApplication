@@ -29,7 +29,7 @@ namespace GuiLayer.Controllers
                     LoggedIn = true;
                     Email = model.Email;
                     return RedirectToAction(nameof(ItemController.ItemList), "Item");
-                }   
+                }
             }
 
             return View(model);
@@ -43,6 +43,60 @@ namespace GuiLayer.Controllers
                 Email = string.Empty;
             }
             return RedirectToAction(nameof(ItemController.ItemList), "Item");
+        }
+
+        public ActionResult Register(RegisterViewModel model)
+        {
+            if (!LoggedIn && ModelState.IsValid)
+            {
+                var service = UnityConfig.Container.Resolve<LoginService>();
+                var success = service.Register(new RegisterInfo()
+                {
+                    Email = model.Email,
+                    Name = model.Name,
+                    Password = model.Password,
+                    Phone = model.Phone,
+                    Surname = model.Surname
+                });
+                if (success)
+                    return RedirectToAction(nameof(AccountController.Login), "Account");
+                else
+                {
+                    return View(new RegisterViewModel()
+                    {
+                        Email = "",
+                        Name = "",
+                        Password = "",
+                        Phone = "",
+                        Surname = "",
+                        Error = "Toks vartotojas jau egzistuoja!"
+                    });
+                }
+            }
+            
+            else if (model.Email != null)
+            {
+                return View(new RegisterViewModel()
+                {
+                    Email = "",
+                    Name = "",
+                    Password = "",
+                    Phone = "",
+                    Surname = "",
+                    Error = "Toks vartotojas jau egzistuoja!"
+                });
+            }
+            else
+            {
+                return View(new RegisterViewModel()
+                {
+                    Email = "",
+                    Name = "",
+                    Password = "",
+                    Phone = "",
+                    Surname = ""
+                });
+            }
         }
     }
 }

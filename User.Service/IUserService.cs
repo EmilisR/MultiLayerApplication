@@ -8,6 +8,8 @@ namespace User.Service
     {
         [OperationContract]
         User GetUser(string email);
+        [OperationContract]
+        bool AddUser(User user);
     }
 
     [DataContract]

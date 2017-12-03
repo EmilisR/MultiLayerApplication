@@ -6,6 +6,32 @@ namespace User.Service
 {
     public class UserService : IUserService
     {
+        public bool AddUser(User user)
+        {
+            try
+            {
+                using (var context = new ShopContext())
+                {
+                    context.Customers.Add(new Customer()
+                    {
+                        Email = user.Email,
+                        IsAdmin = false,
+                        MobileNumber = user.MobileNumber,
+                        Name = user.Name,
+                        Password = user.Password,
+                        Surname = user.Surname
+                    });
+                    context.SaveChanges();
+
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public User GetUser(string email)
         {
             var customer = StandardUserFactory.CreateUser();
@@ -21,6 +47,7 @@ namespace User.Service
                     customer.Name = user.Name;
                     customer.Password = user.Password;
                     customer.Surname = user.Surname;
+                    customer.IsAdmin = user.IsAdmin;
                 }
             }
 
