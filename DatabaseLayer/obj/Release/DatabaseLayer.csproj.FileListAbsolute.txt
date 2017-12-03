@@ -18,3 +18,5 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\Data
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.addstate.resources
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.basket.resources
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.required.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.isadmin.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Release\DatabaseLayer.Migrations.imageurl.resources
