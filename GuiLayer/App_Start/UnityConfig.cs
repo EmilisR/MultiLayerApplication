@@ -1,11 +1,10 @@
-using System;
 using BasketBLService;
-using Unity;
-using Unity.AspNet.Mvc;
-using Microsoft.Practices.Unity.Configuration;
-using System.Configuration;
 using LoginBLService;
+using Microsoft.Practices.Unity.Configuration;
 using ProductItemBLService;
+using System;
+using System.Configuration;
+using Unity;
 
 namespace GuiLayer
 {
@@ -18,9 +17,9 @@ namespace GuiLayer
         private static Lazy<IUnityContainer> container =
           new Lazy<IUnityContainer>(() =>
           {
-              //var a = ConfigurationManager.GetSection("unity");
-              //var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
               var container = new UnityContainer();
+              UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+              section.Configure(container);
               RegisterTypes(container);
               return container;
           });
@@ -49,7 +48,6 @@ namespace GuiLayer
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-
             container.RegisterType<ILoginService, LoginService>();
             container.RegisterType<IProductItemService, ProductItemInStockService>();
             //container.RegisterType<IProductItemService, ProductItemArrivingService>();
