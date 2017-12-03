@@ -4,6 +4,7 @@ using Unity;
 using User.Service;
 using Basket.Service;
 using NotificationService;
+using Product.Service;
 
 namespace BasketBLService
 {
@@ -44,7 +45,7 @@ namespace BasketBLService
             {
                 section.Configure(container);
             }*/
-
+            container.RegisterType<IProductService, ProductService>();
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IBasketService, BasketService>();
             container.RegisterType<INotificationService, EmailNotificationService>();

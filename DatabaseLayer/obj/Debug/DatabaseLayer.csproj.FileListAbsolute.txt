@@ -42,3 +42,4 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\Databa
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\Unity.Abstractions.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\bin\Debug\Unity.Configuration.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.isadmin.resources
+C:\Users\emili\Source\Repos\MultiLayerApplication\DatabaseLayer\obj\Debug\DatabaseLayer.Migrations.imageurl.resources

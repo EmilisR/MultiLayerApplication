@@ -356,13 +356,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EnumBinder.cs" />
     <Compile Include="Helpers\MessageBox.cs" />
     <Compile Include="Models\BasketItemModel.cs" />
     <Compile Include="Models\BasketViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PriceItemModel.cs" />
-    <Compile Include="Models\ProductItem.cs" />
     <Compile Include="Models\ProductItemModel.cs" />
+    <Compile Include="Models\ProductItemsModel.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

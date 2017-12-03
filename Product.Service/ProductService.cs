@@ -24,7 +24,8 @@ namespace Product.Service
                         Price = dbProduct.Price,
                         ProductCategory = dbProduct.ProductCategory,
                         QuantityArriving = dbProduct.QuantityArriving,
-                        QuantityInStock = dbProduct.QuantityInStock
+                        QuantityInStock = dbProduct.QuantityInStock,
+                        ImageUrl = dbProduct.ImageUrl
                     };
                 }
             }
@@ -46,7 +47,8 @@ namespace Product.Service
                     Price = x.Price,
                     ProductCategory = x.ProductCategory,
                     QuantityArriving = x.QuantityArriving,
-                    QuantityInStock = x.QuantityInStock
+                    QuantityInStock = x.QuantityInStock,
+                    ImageUrl = x.ImageUrl
                 }).ToList();
             }
 
@@ -67,7 +69,8 @@ namespace Product.Service
                     Price = x.Price,
                     ProductCategory = x.ProductCategory,
                     QuantityArriving = x.QuantityArriving,
-                    QuantityInStock = x.QuantityInStock
+                    QuantityInStock = x.QuantityInStock,
+                    ImageUrl = x.ImageUrl
                 }).ToList();
             }
 
@@ -92,7 +95,8 @@ namespace Product.Service
                         Price = query.Price,
                         ProductCategory = query.ProductCategory,
                         QuantityArriving = query.QuantityArriving,
-                        QuantityInStock = query.QuantityInStock
+                        QuantityInStock = query.QuantityInStock,
+                        ImageUrl = query.ImageUrl
                     };
                 }
             }
@@ -118,12 +122,39 @@ namespace Product.Service
                         Price = query.Price,
                         ProductCategory = query.ProductCategory,
                         QuantityArriving = query.QuantityArriving,
-                        QuantityInStock = query.QuantityInStock
+                        QuantityInStock = query.QuantityInStock,
+                        ImageUrl = query.ImageUrl
                     };
                 }
             }
 
             return product;
+        }
+
+        public bool AddNewProduct(Product product)
+        {
+            try
+            {
+                using (var context = new ShopContext())
+                {
+                    context.Products.Add(new DatabaseLayer.Product()
+                    {
+                        ImageUrl = product.ImageUrl,
+                        Name = product.Name,
+                        Price = product.Price,
+                        QuantityArriving = product.QuantityArriving,
+                        QuantityInStock = product.QuantityInStock,
+                        Description = product.Description,
+                        ProductCategory = product.ProductCategory
+                    });
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

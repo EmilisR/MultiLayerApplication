@@ -13,8 +13,8 @@ namespace BasketBLService
     {
         public bool AddToBasket(string userMail, int itemId)
         {
-            var userService = DependencyFactory.Container.Resolve<UserService>();
-            var basketService = DependencyFactory.Container.Resolve<BasketService>();
+            var userService = DependencyFactory.Container.Resolve<IUserService>();
+            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
 
             var user = userService.GetUser(userMail);
             if (user != null)
@@ -33,8 +33,8 @@ namespace BasketBLService
         {
             BLBasket result = null;
 
-            var userService = DependencyFactory.Container.Resolve<UserService>();
-            var basketService = DependencyFactory.Container.Resolve<BasketService>();
+            var userService = DependencyFactory.Container.Resolve<IUserService>();
+            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
 
             var user = userService.GetUser(userMail);
             if (user != null)
@@ -65,7 +65,7 @@ namespace BasketBLService
         public BasketItemInfo[] GetBasketItemsInfo(int basketId)
         {
             var productService = DependencyFactory.Container.Resolve<IProductService>();
-            var basketService = DependencyFactory.Container.Resolve<BasketService>();
+            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
 
             var basketItems = basketService.GetBasketItems(basketId);
             return basketItems.Select(x => 
@@ -83,8 +83,8 @@ namespace BasketBLService
 
         public decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven = 0)
         {
-            var userService = DependencyFactory.Container.Resolve<UserService>();
-            var basketService = DependencyFactory.Container.Resolve<BasketService>();
+            var userService = DependencyFactory.Container.Resolve<IUserService>();
+            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
             var notificationService = DependencyFactory.Container.Resolve<INotificationService>();
 
             var user = userService.GetUser(userMail);

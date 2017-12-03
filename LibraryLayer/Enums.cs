@@ -1,4 +1,6 @@
-﻿namespace LibraryLayer
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LibraryLayer
 {
     public class Enums
     {
@@ -10,10 +12,16 @@
         
         public enum ProductCategory
         {
-            TV,
+            [Display(Name = "Televizoriai")]
+            TV = 1,
+            [Display(Name = "Kompiuteriai")]
             Computers,
+            [Display(Name = "Multimedija")]
             Media,
-            Games
+            [Display(Name = "Žaidimai")]
+            Games,
+            [Display(Name = "Telefonai")]
+            Phones
         }
 
         public enum Currency

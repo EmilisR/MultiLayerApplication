@@ -1,7 +1,70 @@
-﻿
+﻿@model GuiLayer.Models.ProductItemModel
+@using LibraryLayer;
 @{
-    ViewBag.Title = "AddNewItem";
+    ViewBag.Title = "Pridėti naują prekę";
 }
 
-<h2>AddNewItem</h2>
+<h2>Pridėti naują prekę</h2>
 
+<form asp-controller="Item" asp-action="AddNewItem" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+    <h4>Pridėkite naują prekę į TechShop elektroninę parduotuvę</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="text" class="col-md-2 control-label">Pavadinimas</label>
+        <div class="col-md-10">
+            <input asp-for="text" class="form-control" value="@Model.Name" name="Name" />
+            <span asp-validation-for="text" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="text" class="col-md-2 control-label">Trumpas aprašymas</label>
+        <div class="col-md-10">
+            <input asp-for="text" class="form-control" value="@Model.Description" name="Description" />
+            <span asp-validation-for="text" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="text" class="col-md-2 control-label">Prekės kategorija</label>
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(m => m.ProductCategory, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Number" class="col-md-2 control-label">Kaina</label>
+        <div class="col-md-10">
+            <input asp-for="Number" class="form-control" value="@Model.Price" name="Price" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Url" class="col-md-2 control-label">Prekės paveiksliuko nuoroda</label>
+        <div class="col-md-10">
+            <input asp-for="Url" class="form-control" value="@Model.ImageUrl" name="ImageUrl" />
+            <span asp-validation-for="Url" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Number" class="col-md-2 control-label">Užsakytas kiekis</label>
+        <div class="col-md-10">
+            <input asp-for="Number" class="form-control" value="@Model.QuantityArriving" name="QuantityArriving" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Number" class="col-md-2 control-label">Kiekis sandėlyje</label>
+        <div class="col-md-10">
+            <input asp-for="Number" class="form-control" value="@Model.QuantityInStock" name="QuantityInStock" />
+            <span asp-validation-for="Number" class="text-danger"></span>
+        </div>
+    </div>
+    @if (Model.Error != null && Model.Error != "")
+    {
+        <h4 style="color: red">@Model.Error</h4>
+    }
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Pridėti</button>
+        </div>
+    </div>
+</form>

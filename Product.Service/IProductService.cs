@@ -9,9 +9,16 @@ namespace Product.Service
     {
         [OperationContract]
         Product GetProduct(int itemId);
-
         [OperationContract]
         Product[] GetProductsArriving();
+        [OperationContract]
+        Product[] GetProductsInStock();
+        [OperationContract]
+        bool AddNewProduct(Product product);
+        [OperationContract]
+        Product GetProductInStock(int itemId);
+        [OperationContract]
+        Product GetProductArriving(int itemId);
     }
     [DataContract]
     public class Product
@@ -30,6 +37,8 @@ namespace Product.Service
         public int QuantityArriving { get; set; }
         [DataMember]
         public Enums.ProductCategory ProductCategory { get; set; }
+        [DataMember]
+        public string ImageUrl { get; set; }
 
     }
 

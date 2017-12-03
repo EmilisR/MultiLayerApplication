@@ -14,7 +14,7 @@ namespace GuiLayer.Controllers
         {
             if (AccountController.LoggedIn)
             {
-                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
+                var basketService = UnityConfig.Container.Resolve<RegisteredUserBasketService>();
 
                 basketService.AddToBasket(AccountController.Email, itemId);
             }
@@ -27,7 +27,7 @@ namespace GuiLayer.Controllers
         {
             if (AccountController.LoggedIn)
             {
-                var basketService = UnityConfig.Container.Resolve<BasketBLService.RegisteredUserBasketService>();
+                var basketService = UnityConfig.Container.Resolve<RegisteredUserBasketService>();
 
                 if (model.PaymentType == Enums.PaymentType.Cash)
                     basketService.PayForBasket(AccountController.Email, Enums.PaymentType.Cash, model.MoneyGiven);
@@ -44,7 +44,7 @@ namespace GuiLayer.Controllers
 
             if (AccountController.LoggedIn)
             {
-                var basketService = UnityConfig.Container.Resolve<RegisteredUserBasketService>();
+                var basketService = UnityConfig.Container.Resolve<IBasketBLService>();
                 try
                 {
                     var basket = basketService.GetBasketInfo(AccountController.Email);

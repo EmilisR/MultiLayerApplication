@@ -1,4 +1,4 @@
-﻿@model GuiLayer.Models.ProductItemModel
+﻿@model GuiLayer.Models.ProductItemsModel
 @using System.Collections;
 @{
     ViewBag.Title = "Prekės";
@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td>
-                <img src="http://www.lptps.com/wp-content/uploads/2016/11/asus-zenbook-ux390ua.jpg" alt="Laptop" width="60" height="42">
+                <img src="@product.ImageUrl" alt="@product.Name" width="120" height="80">
             </td>
         </tr>
         <tr>

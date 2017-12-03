@@ -13,6 +13,7 @@ namespace DatabaseLayer
         public int QuantityInStock { get; set; }
         public int QuantityArriving { get; set; }
         public Enums.ProductCategory ProductCategory { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 }
