@@ -7,6 +7,21 @@ namespace Basket.Service
 {
     public class BasketService : IBasketService
     {
+        public static int CreateBasket(Basket basket)
+        {
+            using (var context = new ShopContext())
+            {
+                context.Baskets.Add(new DatabaseLayer.Basket()
+                {
+                    Paid = basket.Paid,
+                    RegisterDate = basket.RegisterDate,
+                    PaymentType = basket.PaymentType
+                });
+                context.SaveChanges();
+                return context.Baskets.Max(x => x.Id);
+            }
+        }
+
         public bool AddItemToBasket(int basketId, int productId)
         {
             using (var context = new ShopContext())
@@ -48,6 +63,31 @@ namespace Basket.Service
 
                 return true;
             }
+        }
+
+        public Basket GetBasketById(int basketId)
+        {
+            Basket basket = null;
+
+            using (var context = new ShopContext())
+            {
+                var dbBasket = context.Baskets.SingleOrDefault(x => x.Id == basketId);
+
+                if (dbBasket != null)
+                {
+                    basket = new Basket()
+                    {
+                        CustomerId = dbBasket.Customer?.Id,
+                        Id = dbBasket.Id,
+                        Paid = dbBasket.Paid,
+                        PaymentType = dbBasket.PaymentType,
+                        RegisterDate = dbBasket.RegisterDate,
+                        TotalPrice = dbBasket.TotalPrice
+                    };
+                }
+            }
+
+            return basket;
         }
 
         public Basket GetBasketForUser(int userId)

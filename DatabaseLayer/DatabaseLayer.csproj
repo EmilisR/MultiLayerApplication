@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201712030959183_imageurl.Designer.cs">
       <DependentUpon>201712030959183_imageurl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712041909288_guestbasket.cs" />
+    <Compile Include="Migrations\201712041909288_guestbasket.Designer.cs">
+      <DependentUpon>201712041909288_guestbasket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ShopContext.cs" />
     <Compile Include="Customer.cs" />
@@ -117,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712030959183_imageurl.resx">
       <DependentUpon>201712030959183_imageurl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041909288_guestbasket.resx">
+      <DependentUpon>201712041909288_guestbasket.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

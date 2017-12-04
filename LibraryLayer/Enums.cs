@@ -6,6 +6,7 @@ namespace LibraryLayer
     {
         public enum PaymentType
         {
+            Unset,
             Cash,
             CreditCard
         }

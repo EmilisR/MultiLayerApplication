@@ -347,7 +347,7 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.d
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\BasketBLService.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Abstractions.pdb
-C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Container.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\NotificationService.dll.config
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\Unity.Configuration.pdb

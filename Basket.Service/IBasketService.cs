@@ -18,6 +18,8 @@ namespace Basket.Service
         void SetBasketPaid(int basketId);
         [OperationContract]
         void SetBasketPaymentType(int basketId, Enums.PaymentType paymentType);
+        [OperationContract]
+        Basket GetBasketById(int basketId);
     }
     [DataContract]
     public class Basket
@@ -29,7 +31,7 @@ namespace Basket.Service
         [DataMember]
         public decimal TotalPrice { get; set; }
         [DataMember]
-        public int CustomerId { get; set; }
+        public int? CustomerId { get; set; }
         [DataMember]
         public DateTime RegisterDate { get; set; }
         [DataMember]

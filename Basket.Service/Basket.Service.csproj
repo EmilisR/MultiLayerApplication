@@ -73,12 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractBasket.cs" />
-    <Compile Include="BasketCash.cs" />
-    <Compile Include="BasketCreditCard.cs" />
-    <Compile Include="IBasket.cs" />
-    <Compile Include="IBasketCash.cs" />
-    <Compile Include="IBasketCreditCard.cs" />
+    <Compile Include="AbstractFactory.cs" />
     <Compile Include="IBasketService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BasketService.cs" />

@@ -1,6 +1,7 @@
 ﻿@model GuiLayer.Models.BasketViewModel
 @using GuiLayer.Controllers;
-@using GuiLayer.Helpers;
+@using BasketBLService;
+@using Unity;
 
 @{
     ViewBag.Title = "Pirkinių krepšelis";
@@ -11,7 +12,7 @@
 <div>
     @if (Model != null && Model.BasketItems.Count() > 0)
     {
-        if (AccountController.LoggedIn)
+        if (AccountController.LoggedIn && UnityConfig.Container.Resolve<IBasketBLService>().GetType() != typeof(GuestBasketService))
         {
             using (Html.BeginForm("PayForBasket", "Basket", FormMethod.Post))
             {
@@ -52,6 +53,47 @@
                 @Html.RadioButtonFor(model => model.PaymentType, LibraryLayer.Enums.PaymentType.Cash);
                 <p style="display:inline">    </p>
                 @Html.TextBoxFor(model => model.MoneyGiven);<br />
+                <h4>Kreditine kortele</h4> @Html.RadioButtonFor(model => model.PaymentType, LibraryLayer.Enums.PaymentType.CreditCard);<br />
+                <button type="submit" class="btn btn-default payButton">Apmokėti</button>
+            }
+        }
+        else if (UnityConfig.Container.Resolve<IBasketBLService>().GetType() == typeof(GuestBasketService))
+        {
+            using (Html.BeginForm("PayForBasket", "Basket", FormMethod.Post))
+            {
+                <table class="basket">
+                    <thead>
+                        <tr>
+                            <th>Nr.</th>
+                            <th>Prekė</th>
+                            <th>Vnt. Kaina</th>
+                            <th>Kiekis</th>
+                            <th style="text-align:right">Iš viso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @Html.HiddenFor(x => Model.PriceItem.Currency)
+                        @Html.HiddenFor(x => Model.PriceItem.Price)
+                        @for (int i = 0; i < Model.BasketItems.Count(); i++)
+                        {
+                            <tr>
+                                @Html.HiddenFor(x => Model.BasketItems[i].ProductId)
+                                @Html.HiddenFor(x => Model.BasketItems[i].Name)
+                                @Html.HiddenFor(x => Model.BasketItems[i].Price)
+                                @Html.HiddenFor(x => Model.BasketItems[i].Quantity)
+
+                                <td>@Html.DisplayFor(x => Model.BasketItems[i].ProductId)</td>
+                                <td>@Html.DisplayFor(x => Model.BasketItems[i].Name)</td>
+                                <td>@Html.DisplayFor(x => Model.BasketItems[i].Price) @Html.DisplayFor(x => Model.PriceItem.Currency)</td>
+                                <td>@Html.DisplayFor(x => Model.BasketItems[i].Quantity)</td>
+                                <td style="text-align:right;">@Math.Round(Model.BasketItems[i].Quantity * Model.BasketItems[i].Price, 2) @Model.PriceItem.Currency</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td class="totalPrice" colspan="5">Suma: @Html.DisplayTextFor(x => Model.PriceItem.Price) @Html.DisplayTextFor(x => Model.PriceItem.Currency)</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <h4>Kreditine kortele</h4> @Html.RadioButtonFor(model => model.PaymentType, LibraryLayer.Enums.PaymentType.CreditCard);<br />
                 <button type="submit" class="btn btn-default payButton">Apmokėti</button>
             }

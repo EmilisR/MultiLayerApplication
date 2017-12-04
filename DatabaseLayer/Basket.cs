@@ -9,7 +9,6 @@ namespace DatabaseLayer
         public int Id { get; set; }
         public Enums.PaymentType PaymentType { get; set; }
         public decimal TotalPrice { get; set; }
-        [Required]
         public virtual Customer Customer { get; set; }
         public DateTime RegisterDate { get; set; }
         public bool Paid { get; set; }

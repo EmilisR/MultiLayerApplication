@@ -10,7 +10,7 @@ namespace BasketBLService
     public interface IBasketBLService
     {
         [OperationContract]
-        decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven);
+        decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven = 0);
 
         [OperationContract]
         bool AddToBasket(string userMail, int itemId);
@@ -45,7 +45,7 @@ namespace BasketBLService
         [DataMember]
         public decimal TotalPrice { get; set; }
         [DataMember]
-        public int CustomerId { get; set; }
+        public int? CustomerId { get; set; }
         [DataMember]
         public DateTime RegisterDate { get; set; }
         [DataMember]
