@@ -128,7 +128,6 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\vbc
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\VBCSCompiler.exe
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.dll
-C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\Unity.Container.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.pdb
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\BasketBLService.dll.config
 C:\Users\emili\Source\Repos\MultiLayerApplication\TestLayer\bin\Debug\NotificationService.dll
