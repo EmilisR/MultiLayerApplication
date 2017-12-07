@@ -2,7 +2,6 @@
 using LibraryLayer;
 using User.Service;
 using Basket.Service;
-using NotificationService;
 using Unity;
 using Product.Service;
 using System.Linq;

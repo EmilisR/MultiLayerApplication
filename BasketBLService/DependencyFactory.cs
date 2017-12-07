@@ -3,8 +3,8 @@ using System.Configuration;
 using Unity;
 using User.Service;
 using Basket.Service;
-using NotificationService;
 using Product.Service;
+using System;
 
 namespace BasketBLService
 {
@@ -14,6 +14,16 @@ namespace BasketBLService
     public class DependencyFactory
     {
         private static IUnityContainer _container;
+
+        public static IUserService ResolveUserService()
+        {
+            return _container.Resolve<IUserService>();
+        }
+
+        public static IProductService ResolveProductService()
+        {
+            return _container.Resolve<IProductService>();
+        }
 
         /// <summary>
         /// Public reference to the unity container which will 
@@ -48,7 +58,6 @@ namespace BasketBLService
             container.RegisterType<IProductService, ProductService>();
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IBasketService, BasketService>();
-            container.RegisterType<INotificationService, EmailNotificationService>();
 
             _container = container;
         }
@@ -67,6 +76,11 @@ namespace BasketBLService
             }
 
             return ret;
+        }
+
+        public static IBasketService ResolveBasketService()
+        {
+            return Container.Resolve<IBasketService>();
         }
     }
 }

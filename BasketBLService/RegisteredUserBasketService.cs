@@ -3,7 +3,6 @@ using Basket.Service;
 using User.Service;
 using Unity;
 using Product.Service;
-using NotificationService;
 using LibraryLayer;
 using System.Linq;
 
@@ -11,11 +10,19 @@ namespace BasketBLService
 {
     public class RegisteredUserBasketService : IBasketBLService
     {
+        public RegisteredUserBasketService()
+        {
+            basketService = DependencyFactory.ResolveBasketService();
+            userService = DependencyFactory.ResolveUserService();
+            productService = DependencyFactory.ResolveProductService();
+        }
+
+        public IUserService userService { get; set; }
+        public IBasketService basketService { get; set; }
+        public IProductService productService { get; set; }
+
         public bool AddToBasket(string userMail, int itemId)
         {
-            var userService = DependencyFactory.Container.Resolve<IUserService>();
-            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
-
             var user = userService.GetUser(userMail);
             if (user != null)
             {
@@ -32,9 +39,6 @@ namespace BasketBLService
         public BLBasket GetBasketInfo(string userMail)
         {
             BLBasket result = null;
-
-            var userService = DependencyFactory.Container.Resolve<IUserService>();
-            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
 
             var user = userService.GetUser(userMail);
             if (user != null)
@@ -64,9 +68,6 @@ namespace BasketBLService
 
         public BasketItemInfo[] GetBasketItemsInfo(int basketId)
         {
-            var productService = DependencyFactory.Container.Resolve<IProductService>();
-            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
-
             var basketItems = basketService.GetBasketItems(basketId);
             return basketItems.Select(x => 
             {
@@ -83,10 +84,6 @@ namespace BasketBLService
 
         public decimal PayForBasket(string userMail, Enums.PaymentType paymentType, decimal moneyGiven = 0)
         {
-            var userService = DependencyFactory.Container.Resolve<IUserService>();
-            var basketService = DependencyFactory.Container.Resolve<IBasketService>();
-            var notificationService = DependencyFactory.Container.Resolve<INotificationService>();
-
             var user = userService.GetUser(userMail);
             if (user != null)
             {
@@ -105,7 +102,6 @@ namespace BasketBLService
                         basketService.SetBasketPaymentType(basket.Id, paymentType);
                         return 0;
                     }
-                    notificationService.SendNotification(userMail, "Apmokėta sėkmingai");
                 }
             }
 

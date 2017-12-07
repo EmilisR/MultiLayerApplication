@@ -6,24 +6,20 @@ namespace User.Service
 {
     public class UserService : IUserService
     {
+        public Repository repository = new Repository();
         public bool AddUser(User user)
         {
             try
             {
-                using (var context = new ShopContext())
+                repository.AddCustomer(new Customer()
                 {
-                    context.Customers.Add(new Customer()
-                    {
-                        Email = user.Email,
-                        IsAdmin = false,
-                        MobileNumber = user.MobileNumber,
-                        Name = user.Name,
-                        Password = user.Password,
-                        Surname = user.Surname
-                    });
-                    context.SaveChanges();
-
-                }
+                    Email = user.Email,
+                    Surname = user.Surname,
+                    IsAdmin = false,
+                    MobileNumber = user.MobileNumber,
+                    Name = user.Name,
+                    Password = user.Password
+                });
                 return true;
             }
             catch
@@ -35,21 +31,8 @@ namespace User.Service
         public User GetUser(string email)
         {
             var customer = StandardUserFactory.CreateUser();
-            using (var context = new ShopContext())
-            {
-                var user = context.Customers.FirstOrDefault(x => x.Email == email);
 
-                if (user != null)
-                {
-                    customer.Email = user.Email;
-                    customer.Id = user.Id;
-                    customer.MobileNumber = user.MobileNumber;
-                    customer.Name = user.Name;
-                    customer.Password = user.Password;
-                    customer.Surname = user.Surname;
-                    customer.IsAdmin = user.IsAdmin;
-                }
-            }
+            var user = repository.GetCustomerByEmail(email);
 
             return customer;
         }

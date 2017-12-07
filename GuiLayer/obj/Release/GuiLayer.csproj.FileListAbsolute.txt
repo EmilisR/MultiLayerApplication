@@ -217,3 +217,4 @@ C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\obj\Release\GuiLayer.
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\obj\Release\GuiLayer.csproj.CoreCompileInputs.cache
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\obj\Release\GuiLayer.dll
 C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\obj\Release\GuiLayer.pdb
+C:\Users\emili\Source\Repos\MultiLayerApplication\GuiLayer\bin\LibraryLayer.dll.config
